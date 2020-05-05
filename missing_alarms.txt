@@ -1,0 +1,304 @@
+Alarm Name: EvtCucSlrInProgress
+Severity: INFORMATIONAL_ALARM
+Description: License Reservation in progress.
+Route To: Event Log
+Explanation: >License Reservation in progress.
+Recommended Action: License Reservation process must be completed by executing the 'license smart reservation install' CLI command.
+Alarm Name: EvtCucSlrCancel
+Severity: INFORMATIONAL_ALARM
+Description: This will cancel the reservation request and put the Product Instance back in the unregistered state.
+Route To: Event Log
+Explanation: This will cancel the reservation request and put the Product Instance back in the unregistered state.
+Recommended Action: No Action is required.
+Alarm Name: EvtCucSlrInstallSuccess
+Severity: INFORMATIONAL_ALARM
+Description: License Reservation Authorization code installed successfully.
+Route To: Event Log
+Explanation: License Reservation Authorization code installed successfully.
+Recommended Action:No Action is required. .
+Alarm Name: EvtCucSlrReturnSuccess
+Severity: INFORMATIONAL_ALARM
+Description: License Reservation returned successfully.
+Route To: Event Log
+Explanation: License Reservation returned successfully.
+Recommended Action: License Reservation Return process must be completed by entering Reservation Return Code to CSSM. .
+Alarm Name: EvtCucSlrAuthFailed
+Severity: ERROR_ALARM
+Description: Product License Authorization Code is invalid.
+Route To: Event Log, Alert Log
+Explanation: Product License Authorization Code is invalid.
+Recommended Action:Retry License Reservation with valid Authorization Code.If this issue persists, please contact Cisco Technical Support. .
+Alarm Name: EvtCucSlrEnable
+Severity: INFORMATIONAL_ALARM
+Description: License Reservation is successfully enabled.
+Route To: Event Log, Alert Log
+Explanation: License Reservation is successfully enabled.
+Recommended Action:License Reservation process must be completed by installing Authorization Code .
+Alarm Name: EvtCucSlrDisable
+Severity: INFORMATIONAL_ALARM
+Description: License Reservation is successfully disabled.
+Route To: Event Log, Alert Log
+Explanation: License Reservation is successfully disabled.
+Recommended Action:No Action is required. .
+Alarm Name: EvtCucSlrNotAuthorized
+Severity: WARNING_ALARM
+Description: The Product is no longer authorized due to insufficient number of licenses..
+Route To: Event Log, Alert Log
+Explanation: The license is no longer authorized due to insufficient number of licenses.
+Recommended Action:Reduce the license usage or install Authorization Code with sufficient license count.
+Alarm Name: EvtSlmCucEvalMode
+Severity: INFORMATIONAL_ALARM
+Description: Product is operating in Evaluation Mode that will expire after %1 day(s).
+Route To: Event Log
+Explanation: Product is not registered with Cisco Smart Software License Manager and is operating in Evaluation Mode. Evaluation expire will block user provisioning.
+Recommended Action: Register the Product with Cisco Smart Software License Manager.
+Alarm Name: EvtSlmCucEvalExpired
+Severity: ERROR_ALARM
+Description: Smart Licensing evaluation period of the Product has been expired.
+Route To: Event Log, Alert Log
+Explanation: Product evaluation period for Smart Licensing is expired, user provisioning is blocked now.
+Recommended Action: Register the Product with Cisco Smart Software License Manager and purchase adequate licenses.
+Alarm Name: EvtSlmCucEvalNearToExpireWarn
+Severity: WARNING_ALARM
+Description: Product is operating in Evaluation Mode that is about to expire after %1 day(s).
+Route To: Event Log, Alert Log
+Explanation: Product is not registered with Cisco Smart Software License Manager and is operating in Evaluation Mode which will expire after %1 day(s), After evaluation expiration you will not be allowed to provision users.
+Recommended Action: Register the Product with Cisco Smart Software License Manager and add adequate licenses.
+Alarm Name: EvtSlmCucAuthNearToExpireWarn
+Severity: WARNING_ALARM
+Description: Product license authorization will expire after %1 day(s).
+Route To: Event Log, Alert Log
+Explanation: Currently Product is operating in Compliance mode and Product License authorization will expire after %1 day(s).
+Recommended Action: Renew the Authorization on Cisco Smart Software Manager before authorization expiration.
+Alarm Name: EvtSlmCucAuthExpired
+Severity: ERROR_ALARM
+Description: Product license authorization has expired ,You will not be allowed to provision users.
+Route To: Event Log, Alert Log
+Explanation: The Product License authorization has expired as it did not successfully renew its license authorization prior to the authorization expiry date.
+Recommended Action: Renew the license authorization in order to restore the ability to provision users .
+Alarm Name: EvtSlmCucRegistrationNearToExpireWarn
+Severity: WARNING_ALARM
+Description: Registration of the Product will expire after %1 day(s).
+Route To: Event Log, Alert Log
+Explanation: Registration of Cisco Unity Connection will expire after %1 days .
+Recommended Action: Renew registration of the Product with Cisco Smart Software License Manager before registration expired.
+Alarm Name: EvtSlmCucRegistrationExpired
+Severity: ERROR_ALARM
+Description: Product license registration has expired and product is unregistered with Cisco Smart Software Manager.
+Route To: Event Log, Alert Log
+Explanation: Product license registration has expired as it did not successfully renew its license registration prior to the registration expiry date.
+Recommended Action: Register the Product with Cisco Smart Software License Manager in order to restore the ability to use product services.
+Alarm Name: EvtSlmCucRenewAuthFailure
+Severity: ERROR_ALARM
+Description: There was an unexpected failure occurred while renewing the authorization of Cisco Unity Connection on Cisco Smart Software Manager.
+Route To: Event Log, Alert Log
+Explanation: Check the network connectivity with CSSM/Satellite, For further troubleshooting, Please check the CuSlmSvr diagnostic logs.
+Recommended Action: Retry Renew Authorization. If this issue persists, please contact Cisco Technical Support.
+Alarm Name: EvtSlmCucRenewRegistrationFailure
+Severity: ERROR_ALARM
+Description: There was an unexpected failure occurred while renewing the registration of Cisco Unity Connection with Cisco Smart Software Manager.
+Route To: Event Log, Alert Log
+Explanation: Check the network connectivity with CSSM/Satellite, For further troubleshooting, Please check the CuSlmSvr diagnostic logs.
+Recommended Action: Retry Renew Registration. If this issue persists, please contact Cisco Technical Support.
+Alarm Name: EvtSlmCucCommunicationTimeout
+Severity: ERROR_ALARM
+Description: There was a communication timeout occurred on Cisco Unity Connection while connecting to Cisco Smart Software Manager.
+Route To: Event Log, Alert Log
+Explanation: Check the network connectivity with CSSM/satellite, Please check the CuSlmSvr diagnostic logs to determine the source of the problem.
+Recommended Action: If this issue persists, please contact Cisco Technical Support
+Alarm Name: EvtSlmCucRegistrationFailure
+Severity: ERROR_ALARM
+Description: There was an unexpected failure occurred while registering the Product with Cisco Smart Software Manager.
+Route To: Event Log, Alert Log
+Explanation: Check the network connectivity with CSSM/satellite, For further troubleshooting, Please check the CuSlmSvr diagnostic logs.
+Recommended Action: Retry Product Registration. If this issue persists, please contact Cisco Technical Support.
+Alarm Name: EvtSlmCucRenewAuthSuccess
+Severity: INFORMATIONAL_ALARM
+Description: Authorization of Product Licenses is renewed successfully with Cisco Smart Software Manager.
+Route To: Event Log
+Explanation: Authorization of Product Licenses is renewed successfully with Cisco Smart Software Manager.
+Recommended Action: No action is required.
+Alarm Name: EvtSlmCucRenewIdSuccess
+Severity: INFORMATIONAL_ALARM
+Description: Registration of Product is renewed successfully with Cisco Smart Software Manager.
+Route To: Event Log
+Explanation: Registration of Product is renewed successfully with Cisco Smart Software Manager.
+Recommended Action: No Action is required.
+Alarm Name: EvtSlmCucRegistrationSuccess
+Severity: INFORMATIONAL_ALARM
+Description: Registration of Product is successful with Cisco Smart Software Manager.
+Route To: Event Log
+Explanation: Registration of Product is successful with Cisco Smart Software Manager.
+Recommended Action: No action is required.
+Alarm Name: EvtSlmCucDeregistrationSuccess
+Severity: INFORMATIONAL_ALARM
+Description: Deregistration of Product is successful with Cisco Smart Software Manager.
+Route To: Event Log
+Explanation: Deregistration of Product is successful with Cisco Smart Software Manager.
+Recommended Action: No action is required.
+Alarm Name: EvtSlmCucDeregistrationFailure
+Severity: ERROR_ALARM
+Description: There was an unexpected failure occurred while Deregistering the Product with Cisco Smart Software Manager.
+Route To: Event Log, Alert Log
+Explanation: Check the network connectivity with CSSM/satellite, For further troubleshooting, Please check the CuSlmSvr diagnostic logs.
+Recommended Action: Retry product Deregistration. If this issue persists, please contact Cisco technical support.
+Alarm Name: EvtSlmCucSystemOutOfCompliance
+Severity: ERROR_ALARM
+Description: Product is operating in Out Of Compliance Mode for %1 day(s), user provisioning will be blocked when it exceeds 90 days.
+Route To: Event Log, Alert Log
+Recommended Action: Configure additional licenses to cover the shortage in Cisco Smart Software Manager.
+Alarm Name: EvtSlmCucSystemOutOfComplianceExpired
+Severity: ERROR_ALARM
+Description: Product is operating in Out Of Compliance Mode for %1 day(s), You will not be allowed to provision users.
+Route To: Event Log, Alert Log
+Recommended Action: Configure additional licenses to cover the shortage in Cisco Smart Software Manager.
+Alarm Name: AutoFailbackFailed
+Severity: ERROR_ALARM
+Description: Automatic failback has failed. The failure was caused by %1.
+Route To: Event LogAlert Log
+Explanation: The automatic failback has failed. The possible reasons for the failure include: loss of network connectivity between servers, the original primary server not active or not ready.
+Recommended Action: Please check the cause of failure and mitigate the problem. If the failback was not desirable, please change the system settings to disable the automatic failback.
+Alarm Name: AutoFailbackInitiated
+Severity: INFORMATIONAL_ALARM
+Description: Automatic failback has been initiated. The reason: %1
+Route To: Event Log
+Explanation: The automatic failback has been initiated by the server. The automatic failback is only attempted if the failover was caused by the reboot of the primary server.
+Recommended Action: Please wait for the failback result. If the failback was not desirable, please change the system settings to disable the automatic failback.
+Alarm Name: AutoFailbackSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Automatic failback has been successful. The reason for the failback: %1
+Route To: Event LogAlert Log
+Explanation: The automatic failback was successful. The automatic failback is only attempted if the failover was caused by the reboot of the primary server.
+Recommended Action: None
+Alarm Name: AutoFailoverFailed
+Severity: ERROR_ALARM
+Description: Automatic failover has failed. The reason for the failover: %1. The failure was caused by %2.
+Route To: Event LogAlert Log
+Explanation: The automatic failover has failed. The possible reasons for the failure include: loss of network connectivity between servers, secondary server not active or not ready.
+Recommended Action: Please check the cause of failure and mitigate the problem. Until then the system may not be able to provide all services.
+Alarm Name: AutoFailoverInitiated
+Severity: INFORMATIONAL_ALARM
+Description: Automatic failover has been initiated. The reason: %1
+Route To: Event Log
+Explanation: The automatic failover has been initiated by the server. The possible reasons include: loss of network connectivity to the primary server, or critical service down on the primary server.
+Recommended Action: Please wait for the failover result. There will be 30 days available to mitigate the problem that caused the failover. If the primary server is not down, this can lead to the split-brain scenario.
+Alarm Name: AutoFailoverSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Automatic failover has been successful. The reason for the failover: %1
+Route To: Event LogAlert Log
+Explanation: The automatic failover was successful. The possible reasons for the failover include: loss of network connectivity to the primary server, or critical service down on the primary server.
+Recommended Action: The action has to be taken within 30 days to mitigate the problem that caused the failover.
+Alarm Name: CriticalServiceDown
+Severity: ERROR_ALARM
+Description: Critical Service %1 is down.
+Route To: Event Log
+Explanation: Connection service designated as critical is down. This will cause the system failover.
+Recommended Action: Please wait for the failover result. If failover fails or this service continues to report problems after the failover, manual investigation will be required.
+Alarm Name: EvtSlmCucSlmServerDown
+Severity: ERROR_ALARM
+Description: Connection Smart License Manager Server is currently Down.
+Route To: Event Log, Alert Log
+Explanation: Connection Smart License Manager Server is currently Down. For further troubleshooting, Please check the CuSlmSvr diagnostic logs.
+Recommended Action: Start Smart License Manager Server from CUCA Serviceability Page.
+Alarm Name: ManualFailbackFailed
+Severity: ERROR_ALARM
+Description: Manual failback has failed. The failure was caused by %1.
+Route To: Event Log
+Explanation: The manual failback has failed. The possible reasons for the failure include: loss of network connectivity between servers, the original primary server not active or not ready.
+Recommended Action: Please check the cause of failure and mitigate the problem.
+Alarm Name: ManualFailbackInitiated
+Severity: INFORMATIONAL_ALARM
+Description: Manual failback has been initiated by the Administrator.
+Route To: Event Log
+Explanation: The manual failback has been initiated by the Administrator.
+Recommended Action: None
+Alarm Name: ManualFailbackSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Manual failback has been successful.
+Route To: Event Log
+Explanation: The manual failback initiated by the Administrator was successful.
+Recommended Action: None
+Alarm Name: ManualFailoverFailed
+Severity: ERROR_ALARM
+Description: Manual failover has failed. The failure was caused by %1.
+Route To: Event Log
+Explanation: The manual failover has failed. The possible reasons for the failure include: loss of network connectivity between servers, secondary server not active or not ready.
+Recommended Action: Please check the cause of failure and mitigate the problem. Until then the system may not be able to provide all services.
+Alarm Name: ManualFailoverInitiated
+Severity: INFORMATIONAL_ALARM
+Description: Manual failover has been initiated by the Administrator.
+Route To: Event Log
+Explanation: The manual failover has been initiated by the Administrator.
+Recommended Action: Please wait for the failover result. There will be 30 days available to mitigate the problem that triggered the failover.
+Alarm Name: ManualFailoverSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Manual failover has been successful.
+Route To: Event Log
+Explanation: The manual failover initiated by the Administrator was successful.
+Recommended Action: The action has to be taken within 30 days to mitigate the problem that triggered the failover.
+Alarm Name: NoConnectionToPeer
+Severity: ERROR_ALARM
+Description: Lost communication with the remote server %1 in the cluster. The remote server may be down.
+Route To: Event LogAlert Log
+Explanation: Connection lost to the peer server in the cluster. Heartbeat not received for at least 30seconds. If the peer is the primary server, failover will be initiated immediately.
+Recommended Action: Please wait for the failover result. There will be 30 days available to mitigate the problem. If the primary server is not down, this can lead to the split-brain scenario.
+Alarm Name: RegainedPeerCommunication
+Severity: INFORMATIONAL_ALARM
+Description: SRM regained communication with the remote server %1$ in the cluster.
+Route To: Event Log
+Explanation: The Server Role Manager (SRM) service in this server regained communication with the remote server in the cluster.
+Recommended Action: None
+Alarm Name: ReplicationDelay
+Severity: INFORMATIONAL_ALARM
+Description: Database replication queue size has exceeded the warning threshold. Redundant servers may be out of sync.
+Route To: Event Log
+Explanation: Database replication queue size has exceeded the warning threshold. Redundant servers may be out of sync. Users may experience unpleasant behavior.
+Recommended Action: None
+Alarm Name: ReplicationStarted
+Severity: INFORMATIONAL_ALARM
+Description: Database synchronization between redundant servers has been completed. Database replication has been started.
+Route To: Event Log
+Explanation: Database synchronization between redundant servers has been completed. Database replication has been started.
+Recommended Action: None
+Alarm Name: ReplicationStopped
+Severity: ERROR_ALARM
+Description: Database replication queue size has exceeded the maximum threshold. Replication between redundant servers has been stopped.
+Route To: Event Log
+Explanation: Database replication queue size has exceeded the maximum threshold. Replication between redundant servers has been stopped. Users may experience unpleasant behavior.
+Recommended Action: None
+Alarm Name: SbrFailed
+Severity: ERROR_ALARM
+Description: The split-brain resolution procedure failed to resolve the issues. The failure was caused by %1.
+Route To: Event LogAlert Log
+Explanation: Both servers have been acting as primary servers for a period of time. The resolution procedure failed to resolve the issues.
+Recommended Action: Please check the cause of failure and mitigate the problem. Then run the SBR procedure manually.
+Alarm Name: SbrInitiated
+Severity: INFORMATIONAL_ALARM
+Description: Split-brain resolution procedure has been initiated.
+Route To: Event Log
+Explanation: Both servers have been acting as primary servers for a period of time. The resolution procedure has been initiated.
+Recommended Action: Please wait for the result of the resolution procedure.
+Alarm Name: SbrSuccessful
+Severity: INFORMATIONAL_ALARM
+Description: Split-brain resolution procedure run successfully.
+Route To: Event Log
+Explanation: Both servers have been acting as primary servers for a period of time. The resolution procedure resolved all potential issues.
+Recommended Action: None
+Alarm Name: ServerActivated
+Severity: INFORMATIONAL_ALARM
+Description: Server has been activated by the Administrator.
+Route To: Event Log
+Explanation: Server has been activated by the Administrator. The server role will be determined based on the database and peer status. All appropriate services will be started.
+Recommended Action: None
+Alarm Name: ServerDeactivated
+Severity: INFORMATIONAL_ALARM
+Description: Server has been deactivated by the Administrator.
+Route To: Event Log
+Explanation: Server has been deactivated by the Administrator. It will not be receiving any calls or handling web and IMAP requests until activated.
+Recommended Action: None
+Alarm Name: SplitBrainDetected
+Severity: WARNING_ALARM
+Description: Split-brain situation was detected.
+Route To: Event Log
+Explanation: Both servers have been acting as primary servers for a period of time. The action will be taken to resolve potential issue.
+Recommended Action: Please wait for the result of the resolution procedure.

@@ -1,0 +1,2012 @@
+Alarm Name: DiskConsumptionCloseToCapacityThreshold
+Severity: ERROR_ALARM
+Description: Disk space consumption is near disk capacity. This messaging system is currently using %1 percent of total disk space available (%2MB). The system will not record new messages if disk consumption is at or higher than %3 percent.
+Route To: Event LogAlert Log
+Explanation: When the system is at disk capacity, users cannot send or forward messages and cannot receive new messages until the disk capacity threshold is no longer exceeded. (Note that users can still listen to existing messages and delete messages.)
+Recommended Action: Free disk space on this system. Start by having users delete voice messages that they no longer need. Connection automatically removes deleted messages from the hard disk every 30 minutes. To ensure that the system does not reach maximum disk capacity again, revise the Message Storage > Message Aging Policy and the Message Storage > Mailbox Quotas pages in Cisco Unity Connection Administration.
+Alarm Name: DiskConsumptionExceedsCapacityThreshold
+Severity: ERROR_ALARM
+Description: Disk space consumption is at disk capacity. This messaging system is currently using %1 percent of total disk space available (%2MB). The system will not record new messages when disk consumption is at or higher than %3 percent.
+Route To: Event LogAlert Log
+Explanation: When the system is at disk capacity, users cannot send or forward messages and cannot receive new messages until the disk capacity threshold is no longer exceeded. (Note that users can still listen to existing messages and delete messages.)
+Recommended Action: Free disk space on this system. Start by having users delete voice messages that they no longer need. Connection automatically removes deleted messages from the hard disk every 30 minutes. To ensure that the system does not reach maximum disk capacity again, revise the Message Storage > Message Aging Policy and the Message Storage > Mailbox Quotas pages in Cisco Unity Connection Administration.
+Alarm Name: EvtAppendUserInfo
+Severity: INFORMATIONAL_ALARM
+Description: %1
+Route To: Event Log
+Explanation: User Information
+Recommended Action: None
+Alarm Name: EvtAsMethodHresult
+Severity: ERROR_ALARM
+Description: Unexpected error occurred in the User searcher conversation. For further investigation, please turn on all the diagnostics for Address Searcher. TECHNICAL DETAILS:%1 returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: Unexpected error occurred in the User searcher conversation.
+Recommended Action: For further investigation, please turn on all the diagnostics for ConvSub and CDE.
+Alarm Name: EvtAsNullParameter
+Severity: ERROR_ALARM
+Description: An invalid argument (a NULL parameter) was received. This is a fatal condition and is not expected. Possible reason for failure could be a corrupted stack or memory. TECHNICAL DETAILS: Invalid argument passed into method %1 on line %2 of file %3.
+Route To: Event Log
+Explanation: An invalid argument (a NULL parameter) was received. This is a fatal condition and is not expected. Possible reason for failure could be a corrupted stack or memory.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtAsNullPointer
+Severity: ERROR_ALARM
+Description: Invalid data (a NULL pointer) found. This is a fatal condition and is not expected. Possible reasons for failure could be data link corruptions or a corrupted stack or memory. TECHNICAL DETAILS: Method %1 returned a NULL pointer on line %2 of file %3.
+Route To: Event Log
+Explanation: Invalid data (a NULL pointer) found. This is a fatal condition and is not expected. Possible reasons for failure could be data link corruptions or a corrupted stack or memory.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtAXLServerConnectionFailed
+Severity: ERROR_ALARM
+Description: Failed to update PIN on CUCM. Reason: Unable to connect with the AXL Server.
+Route To: Event Log
+Explanation: Failed to update PIN on CUCM since connection to AXL server failed.
+Recommended Action: Verify AXL server configuration and test the AXL connectivity
+Alarm Name: EvtAuditEncryptFailed
+Severity: ERROR_ALARM
+Description: CuEncrypt failed to encrypt user data. DETAILED INFORMATION:Account Name: %1 Process Name: %2 Error: %3 Additional Details: %4
+Route To: Event Log
+Explanation: CuEncrypt failed to encrypt user data.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtAuditEncryptSetupSuccess
+Severity: INFORMATIONAL_ALARM
+Description: CuEncrypt encryption key and initialization vector are successfully set up. DETAILED INFORMATION: Account Name: %1 Process Name: %2
+Route To: Event Log
+Explanation: CuEncrypt encryption key and initialization vector are successfully set up.
+Recommended Action: None
+Alarm Name: EvtAuditEncryptSuccess
+Severity: INFORMATIONAL_ALARM
+Description: CuEncrypt successfully encrypted/decrypted user data. DETAILED INFORMATION: Account Name: %1 Process Name: %2 Additional Information: %3
+Route To: Event Log
+Explanation: CuEncrypt successfully encrypted/decrypted user data.
+Recommended Action: None
+Alarm Name: EvtAuthzKeyRotation
+Severity: WARNING_ALARM
+Description: Jabber login for user is failing due to improper Authz keys. Sync keys with the associated Authz Server. Refer Cisco Unity Connection Troubleshooting Guide for more details.
+Route To: Sys Log
+Explanation: Authz key validation error occurred due to mismatch of existing Authz keys with the corresponding Authz Server.
+Recommended Action: Sync keys with the Authz Server.
+Alarm Name: EvtAvmiuDetectMultipleRemote
+Severity: ERROR_ALARM
+Description: Component Miu: device %1: detected simultaneous connections to multiple remote IP addresses or ports. The remote IP address/ports are: 1=%2; 2=%3. This condition can result in disruptions to or loss of messages as they are recorded. The cause of this condition is an endpoint that erroneously sends RTP data because the audio stream has not been properly terminated.
+Route To: Event Log
+Explanation: Component Miu: device detected simultaneous connections to multiple remote IP addresses or ports. This condition can result in disruptions to or loss of messages as they are recorded. The cause of this condition is an endpoint that erroneously sends RTP data because the audio stream has not been properly terminated.
+Recommended Action: None
+Alarm Name: EvtBackendInitFailed
+Severity: ERROR_ALARM
+Description: Initialization failed, unable to continue. Turn on Notifier Initialization micro traces to troubleshoot.
+Route To: Event Log
+Explanation: Initialization failed, unable to continue.
+Recommended Action: Turn on Notifier Initialization micro traces to troubleshoot.
+Alarm Name: EvtBranchProvisioned
+Severity: INFORMATIONAL_ALARM
+Description: The branch[name= %1, address= %2] has been successfully provisioned.
+Route To: Event Log, Alert Log
+Explanation: The branch has been successfully associated with the central Connection server.
+Recommended Action: NONE
+Alarm Name: EvtBranchProvisioningFailed
+Severity: WARNING_ALARM
+Description: Provisioning for branch[name= %1, address= %2] has failed.
+Route To: Event Log, Alert Log
+Explanation: The provisioning of branch has been failed.
+Recommended Action: If there is no connectivity between the central Unity Connection server and the branch office, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC.
+Alarm Name: EvtBranchProvisioningFailedMaxRetries
+Severity: ERROR_ALARM
+Description: Provisioning for branch[name= %1, address= %2] has failed after maximum %3 retries.
+Route To: Event Log, Alert Log
+Explanation: Provisioning for a branch has failed in all the retries.
+Recommended Action: If there is no connectivity between the central Connection server and the branch office, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC.
+Alarm Name: EvtBranchProvisioningFailedMaxWait
+Severity: ERROR_ALARM
+Description: A provisioning completion notification was not received for branch[name= %1, address= %2] within the maximum wait time of %3 minutes.
+Route To: Event Log, Alert Log
+Explanation: Provisioning for a branch has failed because the branch did not return the provisioning completion status within the defined timeframe.
+Recommended Action: If there is no connectivity between the central Unity Connection server and the branch office, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC.
+Alarm Name: EvtBranchVoiceMailUpload
+Severity: INFORMATIONAL_ALARM
+Description: Voicemail upload for branch[name= %1, address= %2] completed successfully. %3 messages were uploaded.
+Route To: Event Log
+Explanation: Voice mails from branch are uploaded on the central Unity Connection.
+Recommended Action: NONE
+Alarm Name: EvtBranchVoiceMailUploadFailed
+Severity: ERROR_ALARM
+Description: Voice mail upload for branch[name= %1, address= %2] has failed.
+Route To: Event Log
+Explanation: No voicemail could be uploaded from the branch to the central Unity Connection server.
+Recommended Action: If there is no connectivity between the central Unity Connection server and the branch office, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC.
+Alarm Name: EvtBranchVoiceMailUploadPartial
+Severity: WARNING_ALARM
+Description: Voicemail upload for branch[name= %1, address= %2] partially completed. %3 messages out of %4 were uploaded.
+Route To: Event Log
+Explanation: All the voicemails could not be uploaded from branch to the central Unity Connection server.
+Recommended Action: If there is no connectivity between the central Unity Connection server and the branch office, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC
+Alarm Name: EvtCallHandlerInvalidRecipientProp
+Severity: ERROR_ALARM
+Description: CallHandler [%1] contains an invalid Recipient Object ID.
+Route To: Event Log
+Explanation: CallHandler contains an invalid Recipient Object ID.
+Recommended Action: Use Cisco Unity Connection Administration to verify CallHandler configuration.
+Alarm Name: EvtCallwaitingDetected
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection SCCP integration: Warning: CallWaiting tone detected on a voice mail port. The second caller (that is on Call Waiting) will be ignored, and eventually the ports will disconnect from Cisco Unified Communications Manager. To fix this problem, disable call waiting for voice mail ports on the Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection SCCP integration: Warning: CallWaiting tone detected on a voice mail port. The second caller (that is on Call Waiting) will be ignored, and eventually the ports will disconnect from Cisco Unified Communications Manager.
+Recommended Action: To fix this problem, disable call waiting for voice mail ports on the Cisco Unified Communications Manager.
+Alarm Name: EvtCdeMethodHresult
+Severity: INFORMATIONAL_ALARM
+Description: %1 returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: Method return.
+Recommended Action: None
+Alarm Name: EvtConnectionToMediaSenseServerFailed
+Severity: ERROR_ALARM
+Description: Connection to MediaSense Server failed due to %1.
+Route To: Event Log
+Explanation: Connection to MediaSense Server failed because MediaSense Server returned an error or it went down.
+Recommended Action: If there is no connectivity to Cisco MediaSense, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC.
+Alarm Name: EvtConnectionToMediaSenseServerSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Connection to MediaSense Server Succeeded.
+Route To: Event Log
+Explanation: Connection to MediaSense Server Succeeded.
+Recommended Action: None
+Alarm Name: EvtCdeNamedPropsDump
+Severity: INFORMATIONAL_ALARM
+Description: Transferred to FailSafe conversation while running conversation %1 on Port %2. See the following file for the contents of the Named Properties : %3.
+Route To: Event Log
+Explanation: Transferred to FailSafe conversation.
+Recommended Action: None
+Alarm Name: EvtCentralNotReachable
+Severity: ERROR_ALARM
+Description: Cenral connection[address= %1] is not reachable.
+Route To: Event Log, Alert Log
+Explanation: There is an issue with the connectivity between the central Connection server and the specified branch.
+Recommended Action: If there is no connectivity between the central Connection server and the branch office, refer to the Troubleshooting Guide for Cisco Unity Connection available at http://www.cisco.com/en/US/docs/voice_ip_comm/connection/11x/troubleshooting/guide/11xcuctsgx.html. If the problem is not resolved then please contact Cisco TAC.
+Alarm Name: EvtCmlMessageCouldNotBeDelivered
+Severity: ERROR_ALARM
+Description: An error has occurred while attempting to assemble and send a new message from %1 to %2. Message could not be sent, see log file for more information.
+Route To: Event Log
+Explanation: An error has occurred while attempting to assemble and send a new message. Message could not be sent.
+Recommended Action: See log file for more information.
+Alarm Name: EvtCollectionNotFoundError
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) received database notification event %3 but was unable to find collection %4. Notification could not be processed.
+Route To: Event Log
+Explanation: Database synchronization thread received database notification event but was unable to find collection. Notification could not be processed.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtConnectFailedWillRetry
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection SCCP integration: Device %1 (Cisco Unity Connection port %1 was unable to connect to the Cisco Unified Communications Manager cluster. Examine the cluster connection settings and verify that they are correct. The device will keep trying to connect in case the Cisco Unified Communications Manager cluster is temporarily unavailable.
+Route To: Event Log
+Explanation: Cisco Unity Connection SCCP integration: Cisco Unity Connection port was unable to connect to the Cisco Unified Communications Manager cluster.
+Recommended Action: Examine the cluster connection settings and verify that they are correct. The device will keep trying to connect in case the Cisco Unified Communications Manager cluster is temporarily unavailable.
+Alarm Name: EvtConvRegistrationFailed
+Severity: ERROR_ALARM
+Description: Failed registering the conversation: [%1]. The conversation name has already been registered.
+Route To: Event Log
+Explanation: Failed to register the conversation. The conversation name has already been registered.
+Recommended Action: None
+Alarm Name: EvtCsMalDiskCapacityThresholdExceeded
+Severity: ERROR_ALARM
+Description: The system has stopped receiving messages because %1 server has exceeded its disk capacity threshold.
+Route To: Event Log
+Explanation: Users cannot send or forward messages and cannot receive new messages until the disk capacity threshold is no longer exceeded.  Users can listen to existing messages and delete messages.
+Recommended Action: Free disk space on this system. Start by having users delete voice messages that they no longer need. Connection automatically removes deleted messages from the hard disk every 30 minutes. To ensure that the system does not reach maximum disk capacity again, revise the Message Storage > Message Aging Policy and the Message Storage > Mailbox Quotas pages in Cisco Unity Connection Administration.
+Alarm Name: EvtCsMalDiskCapacityThresholdOK
+Severity: INFORMATIONAL_ALARM
+Description: The system has resumed receiving messages now that the disk capacity threshold is no longer exceeded
+Route To: Event Log
+Explanation: The disk capacity threshold is no longer being exceeded resulting in users now being able to send or forward messages, and receive new messages.
+Recommended Action: None
+Alarm Name: EvtCugaAltTurnedOff
+Severity: INFORMATIONAL_ALARM
+Description: The alternate greeting was turned off through the Cisco Unity Connection Greetings Administrator for call handler with extension [%1] by Mail User [%2] at extension [%3]. The ANI for the call is - [%4]
+Route To: Event Log
+Explanation: The alternate greeting was turned off through the Cisco Unity Connection Greetings Administrator for call handler.
+Recommended Action: None
+Alarm Name: EvtCugaAltTurnedOn
+Severity: INFORMATIONAL_ALARM
+Description: The alternate greeting was turned on through the Cisco Unity Connection Greetings Administrator for call handler with extension [%1] by Mail User [%2] at extension [%3]. The ANI for the call is - [%4]
+Route To: Event Log
+Explanation: The alternate greeting was turned on through the Cisco Unity Connection Greetings Administrator for call handler.
+Recommended Action: None
+Alarm Name: EvtCugaRecChanged
+Severity: INFORMATIONAL_ALARM
+Description: The recording for a greeting was changed through the Cisco Unity Connection Greetings Administrator - [%1] changed for call handler with extension [%2] by Mail User [%3] at extension [%4]. The ANI for the call is - [%5]
+Route To: Event Log
+Explanation: The recording for a greeting was changed through the Cisco Unity Connection Greetings Administrator.
+Recommended Action: None
+Alarm Name: EvtCuMethodHresult
+Severity: ERROR_ALARM
+Description: Unexpected error occurred in the TUI utilities conversation. For further investigation, please turn on all the diagnostics for ConvSub. TECHNICAL DETAILS: %1 returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: Unexpected error occurred in the TUI utilities conversation.
+Recommended Action: Turn on all the diagnostics for ConvSub.
+Alarm Name: EvtCuNoDigitsEntered
+Severity: ERROR_ALARM
+Description: Unexpected call to a utility. %1 should not be called without digits. Possible reasons could be invalid links or some MIU issues.
+Route To: Event Log
+Explanation: Unexpected call to a utility. It should not be called without digits. Possible reasons could be invalid links or some MIU issues.
+Recommended Action: None
+Alarm Name: EvtCuNullParameter
+Severity: ERROR_ALARM
+Description: An invalid argument (a NULL parameter) was received. This is a fatal condition and is not expected. Possible reason for failure could be a corrupted stack or memory. TECHNICAL DETAILS: Invalid argument passed into method %1 on line %2 of file %3.
+Route To: Event Log
+Explanation: An invalid argument (a NULL parameter) was received. This is a fatal condition and is not expected. Possible reason for failure could be a corrupted stack or memory.
+Recommended Action: None
+Alarm Name: EvtCuNullPointer
+Severity: ERROR_ALARM
+Description: Invalid data (a NULL pointer) found. This is a fatal condition and is not expected. Possible reasons for failure could be data link corruptions or a corrupted stack or memory. TECHNICAL DETAILS: Method %1 returned a NULL pointer on line %2 of file %3.
+Route To: Event Log
+Explanation: Invalid data (a NULL pointer) found. This is a fatal condition and is not expected. Possible reasons for failure could be data link corruptions or a corrupted stack or memory.
+Recommended Action: None
+Alarm Name: EvtDataSysAgentDbAlmostFull
+Severity: WARNING_ALARM
+Description: DbSpace %1 is almost full. Its usage has exceeded the warning threshold of %2 used.
+Route To: Event Log
+Explanation: The DbSpace is almost full. If the DbSpace becomes full, the system may not be able to provide all services.
+Recommended Action: Please check that the Connection services are operating correctly. If one of the Connection services stops running, the database could grow beyond the warning threshold for the system.
+Alarm Name: EvtDataSysAgentDbSpaceUsageFailed
+Severity: ERROR_ALARM
+Description: Failed to retrieve DbSpace usage information when running the "Monitor the Unity Connection databases" SysAgent task.
+Route To: Event Log
+Explanation: The task "Monitor the Unity Connection databases" was unable to retrieve the DbSpace usage information.
+Recommended Action: See the SysAgent trace log for more information.
+Alarm Name: EvtDataSysAgentMbxDbAlmostFull
+Severity: WARNING_ALARM
+Description: The mail DbSpace %1 is almost full. Its usage has exceeded the warning threshold of %2 used.
+Route To: Event Log
+Explanation: A DbSpace used by a mailbox store is almost full. If the DbSpace becomes full, message delivery to recipient's whose mailbox is located in this mailbox store will fail.
+Recommended Action: Please check the Message Store settings.
+Alarm Name: EvtDbeventError
+Severity: ERROR_ALARM
+Description: An error occurred initializing the connection to Connection DB Event Publisher. Updates may be delayed slightly. TECHNICAL DETAILS: %1
+Route To: Event Log
+Explanation: An error occurred initializing the connection to Connection DB Event Publisher. Updates may be delayed slightly.
+Recommended Action: None
+Alarm Name: EvtDbeventStart
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been re-established.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been re-established.
+Recommended Action: None
+Alarm Name: EvtDbeventStop
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been broken. Updates may be delayed slightly. TECHNICAL DETAILS: Polling interval set to %1 seconds.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been broken. Updates may be delayed slightly.
+Recommended Action: None
+Alarm Name: EvtDBHelperConnectionFailbackToLocal
+Severity: ERROR_ALARM
+Description: Failed to obtain a connection to the cluster primary database. We have failed back to using the local database.
+Route To: Event Log
+Explanation: To maintain database consistency many operations are performed on the cluster primary database. This error was generated because we failed to obtain a connection to the cluster primary database and instead, used the local database to perform the operation.
+Recommended Action: Check network connectivity between the primary and secondary and check to make sure the primary is functioning properly.
+Alarm Name: EvtDBHelperConnectionPrimaryRestored
+Severity: INFORMATIONAL_ALARM
+Description: Connectivity to the cluster primary database has been restored.
+Route To: Event Log
+Explanation: After a period of inaccessibility, connectivity to the cluster primary database has been restored.
+Recommended Action: Check the health of cluster replication to make sure data is being synchronized between the cluster members.
+Alarm Name: EvtDBHelperInitialized
+Severity: INFORMATIONAL_ALARM
+Description: IfxDBHelper Initialized
+Route To: Event Log
+Explanation: The alarm notification code was initialized inside the IfxDbHelper code.
+Recommended Action: No action necessary.
+Alarm Name: EvtDblsDbeventConnectError
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) was unable to connect to the database notification publisher. Error %3. %4
+Route To: Event Log
+Explanation: Database synchronization thread in component was unable to connect to the database notification publisher.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtDblsDbeventRegisterError
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) failed registering with database notification publisher for notifications for collection %3. Error %4. %5
+Route To: Event Log
+Explanation: Database synchronization thread failed registering with database notification publisher for notifications for collection.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtDblsUnrecoverableError
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) encountered an error from which it cannot recover. The thread is stopping. %3
+Route To: Event Log
+Explanation: Database synchronization thread encountered an error from which it cannot recover. The thread is stopping.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtDirectorySynchronizationAlertMode
+Severity: WARNING_ALARM
+Description: HTTPS location %1 is in High Availability Alert mode.
+Route To: Event Log, Sys Log, Alert Log
+Explanation: HTTPS location Publisher machine is currently inaccessible, although directory synchronization is being done with its subscriber machine.
+Recommended Action: Check the Syslog (CiscoSyslog) of the concerned HTTPS location for errors.
+Alarm Name: EvtDirectorySynchronizationRecoverFromAlertMode
+Severity: INFORMATIONAL_ALARM
+Description: The network location %1 has recovered from High Availability Alert mode.
+Route To: Event Log, Sys Log, Alert Log
+Explanation: HTTPS location Publisher machine has recovered from Alert mode and directory synchronization is being done with publisher machine.
+Recommended Action: None
+Alarm Name: EvtDisconnected
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Disconnected from Cisco Unified Communications Manager %2. If there are many of these messages in sequence from the same device %1, this port may not be functioning any more. Check to see that it is answering calls, and the server may need to be restarted to activate the port again.
+Route To: Event Log
+Explanation: Cisco Unity Connection port disconnected from Cisco Unified Communications Manager.
+Recommended Action: If there are many of these messages in sequence from the same device, this port may not be functioning any more. Check to see that it is answering calls, and the server may need to be restarted to activate the port again.
+Alarm Name: EvtDnsFailed
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1: DNS lookup of host name '%2' failed. No connections will be attempted to that Cisco Unified Communications Manager. Try looking up the host name manually to verify that DNS is working on your network. You can bypass the DNS lookup by reconfiguring Cisco Unity Connection with the IP address instead of host name.
+Route To: Event Log
+Explanation: Cisco Unity Connection port: DNS lookup failed. No connections will be attempted to that Cisco Unified Communications Manager.
+Recommended Action: Try looking up the host name manually to verify that DNS is working on your network. You can bypass the DNS lookup by reconfiguring Cisco Unity Connection with the IP address instead of host name.
+Alarm Name: EvtEncodebase64Failed
+Severity: ERROR_ALARM
+Description: CuCertMgr could not complete. Unable to base 64 encode the certificate.
+Route To: Event Log
+Explanation: CuCertMgr could not complete. Unable to base 64 encode the certificate.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtExceptionCaught
+Severity: ERROR_ALARM
+Description: CuCertMgr failed to complete successfully. DETAILED INFORMATION: An exception was caught and handled in function %1.
+Route To: Event Log
+Explanation: CuCertMgr failed to complete successfully. An exception was caught and handled.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtExternalSvcError
+Severity: ERROR_ALARM
+Description: External service %1 can not be reached.
+Route To: Event Log
+Explanation: The specified external service can not be reached by the external service diagnostic tool.
+Recommended Action: For detailed information about the error, please check SysAgent task result for Check External Service task! For further troubleshooting, please check the external server's network connection, DNS server's configuration, service ports' configuration, security connection configuration if configured and the service's configuration.
+Alarm Name: EvtFailedDatabaseRead
+Severity: ERROR_ALARM
+Description: Failed to read database %1 with query %2. TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Failed to read the database.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedDatabaseUpdate
+Severity: ERROR_ALARM
+Description: Failed to delete row from NotifyQ table in database %1 with update statement %2. TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Failed to delete row from NotifyQ table.
+Recommended Action: Restart the Connection Notifier service using Cisco Unity Connection Serviceability Control Center. See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedMsgstoremonitorInit
+Severity: ERROR_ALARM
+Description: Unable to initialize the mechanism that monitors the message store. TECHNICAL DETAILS: %1
+Route To: Event Log
+Explanation: Unable to initialize the mechanism that monitors the message store.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedMsgstoremonitorStart
+Severity: ERROR_ALARM
+Description: Unable to register %1 for message store notifications. TECHNICAL DETAILS: %2
+Route To: Event Log
+Explanation: Unable to register for message store notifications. MWI and notifications for the mailbox will not be available.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedMsgstoremonitorStop
+Severity: ERROR_ALARM
+Description: Unable to unregister %1 from message store notifications. TECHNICAL DETAILS: %2
+Route To: Event Log
+Explanation: Unable to unregister from message store notifications.
+Recommended Action: None
+Alarm Name: EvtFailedUpdatingCalendarNotifyFlag
+Severity: ERROR_ALARM
+Description: Error updating calendar notify flag for %1, schedule id= %2, TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Error updating calendar notify flag in the database.
+Recommended Action: The calendar may not trigger notifications as expected. See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedUpdatingDbmwistatus
+Severity: ERROR_ALARM
+Description: Error updating MWI status in database for %1, %2, extension=%3. TECHNICAL DETAILS: %4
+Route To: Event Log
+Explanation: Error updating MWI status in the database.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedUpdatingLastUSNSent
+Severity: ERROR_ALARM
+Description: Error updating last USN sent for Event Service Subscriptions for %1, subscription resource id= %2, TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Error updating last USN sent for Event Service Subscription.
+Recommended Action: The message list sent to subscriptions may be longer than expected. See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedUpdatingNotifiedstatus
+Severity: ERROR_ALARM
+Description: Error updating message notified status in database for %1, message id= %2, TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Error updating message notified status in the database.
+Recommended Action: The message may continue to trigger notifications. See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFailedUpdatingNotifyq
+Severity: ERROR_ALARM
+Description: Error adding entry to NotifyQ table for mailbox %1, action %2. TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Error adding entry to NotifyQ table for the mailbox.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtFeederDirectoryException
+Severity: ERROR_ALARM
+Description: Directory feed for remote site/HTTPS location failed because an internal error occurred during feed retrieval. Error Message: %1.
+Route To: Event Log, Sys Log
+Explanation: Directory Feeder encountered an internal processing error.
+Recommended Action: Check the Tomcat diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtFilenotfound
+Severity: ERROR_ALARM
+Description: The conversation [%1] could not find the file [%2]. Check that the file exists and is available.
+Route To: Event Log
+Explanation: The conversation could not find the file.
+Recommended Action: Check that the file exists and is available.
+Alarm Name: EvtG729aNotInstalled
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: This device has been configured to support the G.729a codec, but the codec is not installed on this computer. Support for G.729a will not be advertised to the Cisco Unified Communications Manager. This device supports the following codec(s): %2.
+Route To: Event Log
+Explanation: Cisco Unity Connection port has been configured to support the G.729a codec, but the codec is not installed on this computer. Support for G.729a will not be advertised to the Cisco Unified Communications Manager.
+Recommended Action: None
+Alarm Name: EvtGenericException
+Severity: ERROR_ALARM
+Description: Exception trapped in %1. %2 Please ensure that Cisco Unity Connection is still answering calls, and reset the ports or restart the computer if it is not already running.
+Route To: Event Log
+Explanation: Exception caught.
+Recommended Action: Please ensure that Cisco Unity Connection is still answering calls, and reset the ports or restart the computer if it is not already running.
+Alarm Name: EvtGoodbyeUnknownServer
+Severity: INFORMATIONAL_ALARM
+Description: Goodbye from unknown server %1.
+Route To: Event Log
+Explanation: Goodbye from unknown server.
+Recommended Action: None
+Alarm Name: EvtGreetingCheckSubMboxOutsidecaller
+Severity: INFORMATIONAL_ALARM
+Description: The mailbox for [alias: %1] is full. The recipient user cannot send or receive new voice messages until mailbox size is reduced.
+Route To: Event Log
+Explanation: The user's mailbox is full. The recipient user cannot send or receive new voice messages until mailbox size is reduced.
+Recommended Action: None
+Alarm Name: EvtGreetingLogsubactivMethodHresult
+Severity: WARNING_ALARM
+Description: Unable to log the activity of leaving a message to a Cisco Unity Connection user. This is not a fatal error. The message was sent successfully, but an error is stopping the data to be logged for the Cisco Unity Connection user reports. TECHNICAL DETAILS: %1 returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: Unable to log the activity of leaving a message to a Cisco Unity Connection user. This is not a fatal error. The message was sent successfully, but an error is stopping the data to be logged for the Cisco Unity Connection user reports.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtGreetingMakePhrase
+Severity: ERROR_ALARM
+Description: An unexpected error occurred while trying to play greeting for a user. Cisco Unity Connection had to terminate the call. One Possible reason could be that the call was disconnected while waiting for the phrase.
+Route To: Event Log
+Explanation: An unexpected error occurred while trying to play greeting for a user. Cisco Unity Connection had to terminate the call. One Possible reason could be that the call was disconnected while waiting for the phrase.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtGreetingMakePhraseHresult
+Severity: ERROR_ALARM
+Description: An unexpected error occurred while trying to play greeting for a user. One possible reason could be that the call was disconnected while waiting for the phrase. TECHNICAL DETAILS: %1 returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: An unexpected error occurred while trying to play greeting for a user. One possible reason could be that the call was disconnected while waiting for the phrase.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtHelloUnknownServer
+Severity: INFORMATIONAL_ALARM
+Description: Contacted by unknown server %1.
+Route To: Event Log
+Explanation: Contacted by unknown server.
+Recommended Action: None
+Alarm Name: EvtInitCcmCertNotFound
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 was unable to find a certificate for Cisco Unified Communications Manager server %2. Verify that this server is functioning correctly, and that all TFTP servers in the cluster have correct CTL Files. Cisco Unity Connection will only register with Cisco Unified Communications Manager servers for which it can find a certificate. If this device is unable to find certificates for any Cisco Unified Communications Manager servers in this cluster, it will continue trying the TFTP download every few seconds. Until it is able to find at least one certificate from a Cisco Unified Communications Manager server, this device will not register with Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection port was unable to find a certificate for Cisco Unified Communications Manager server. Cisco Unity Connection will only register with Cisco Unified Communications Manager servers for which it can find a certificate. If this device is unable to find certificates for any Cisco Unified Communications Manager servers in this cluster, it will continue trying the TFTP download every few seconds. Until it is able to find at least one certificate from a Cisco Unified Communications Manager server, this device will not register with Cisco Unified Communications Manager.
+Recommended Action: Verify that this server is functioning correctly, and that all TFTP servers in the cluster have correct CTL Files.
+Alarm Name: EvtInitCtlSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1 successfully completed the TFTP download of at least one Cisco Unified Communications Manager certificate. Cisco Unity Connection will now attempt to register with Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection port successfully completed the TFTP download of at least one Cisco Unified Communications Manager certificate. Cisco Unity Connection will now attempt to register with Cisco Unified Communications Manager.
+Recommended Action: None
+Alarm Name: EvtInitMissingDeviceCert
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 is missing its device certificate. The device cannot establish a secure connection to Cisco Unified Communications Manager without it. Create a new device certificate and restart Cisco Unity Connection.
+Route To: Event Log
+Explanation: Cisco Unity Connection port is missing its device certificate. The device cannot establish a secure connection to Cisco Unified Communications Manager without it.
+Recommended Action: Create a new device certificate and restart Cisco Unity Connection.
+Alarm Name: EvtInitNoCcmCertFound
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 was unable to find a certificate for any Cisco Unified Communications Manager server in this cluster. Verify that all Cisco Unified Communications Manager and TFTP servers are functioning correctly, and that all TFTP servers in the cluster have correct CTL Files. Cisco Unity Connection will only register with a Cisco Unified Communications Manager server for which it can find a certificate. This device will continue trying the TFTP download every few seconds. Until it is able to find at least one certificate from a Cisco Unified Communications Manager server, this device will not register with Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection port was unable to find a certificate for any Cisco Unified Communications Manager server in this cluster. Cisco Unity Connection will only register with a Cisco Unified Communications Manager server for which it can find a certificate. This device will continue trying the TFTP download every few seconds. Until it is able to find at least one certificate from a Cisco Unified Communications Manager server, this device will not register with Cisco Unified Communications Manager.
+Recommended Action: Verify that all Cisco Unified Communications Manager and TFTP servers are functioning correctly, and that all TFTP servers in the cluster have correct CTL Files.
+Alarm Name: EvtInitNoTftpHostnameResolved
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 was unable to resolve the hostnames of any TFTP servers in this cluster into IP addresses. Cisco Unity Connection uses the TFTP servers to download the certificates for Cisco Unified Communications Manager servers. The primary TFTP server is %2. Verify that this TFTP server and any alternate TFTP servers are functioning correctly. Or use the IP address for the server rather than the host name. This device will continue trying to resolve the host name and perform the TFTP download every few seconds. Until those operations succeed, this device will not register with Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection port was unable to resolve the hostnames of any TFTP servers in this cluster into IP addresses. Cisco Unity Connection uses the TFTP servers to download the certificates for Cisco Unified Communications Manager servers. This device will continue trying to resolve the host name and perform the TFTP download every few seconds. Until those operations succeed, this device will not register with Cisco Unified Communications Manager.
+Recommended Action: Verify that the TFTP server and any alternate TFTP servers are functioning correctly. Or use the IP address for the server rather than the host name.
+Alarm Name: EvtInitNoTftpServers
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 does not have any TFTP servers configured. At least one TFTP server is needed in order to download the Cisco Unified Communications Manager certificates. Until a TFTP server is configured for this device, it will not register with Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection port does not have any TFTP servers configured. At least one TFTP server is needed in order to download the Cisco Unified Communications Manager certificates. Until a TFTP server is configured for this device, it will not register with Cisco Unified Communications Manager.
+Recommended Action: Configure TFTP server for Cisco Unity Connection ports.
+Alarm Name: EvtInitNoTftpSucceeded
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 was unable to perform a TFTP download for any Cisco Unified Communications Manager certificates. The primary TFTP server is %2. Verify that this TFTP server and any alternate TFTP servers are functioning correctly. Cisco Unity Connection will continue trying the TFTP download every few seconds, but until that operation succeeds, this device will not register with Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection port was unable to perform a TFTP download for any Cisco Unified Communications Manager certificates.
+Recommended Action: Verify that the TFTP server and any alternate TFTP servers are functioning correctly. Cisco Unity Connection will continue trying the TFTP download every few seconds, but until that operation succeeds, this device will not register with Cisco Unified Communications Manager.
+Alarm Name: EvtInitRegRejected
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection SCCP integration is able to connect to the Cisco Unified Communications Manager %2, but registration of device %1 (Cisco Unity Connection port %1 was rejected. Check that the device name '%3' is valid on the Cisco Unified Communications Manager server. If applicable, also ensure that the device security mode configured on Cisco Unified Communications Manager matches the device security mode configured on Cisco Unity Connection for this device.
+Route To: Event Log
+Explanation: Cisco Unity Connection SCCP integration is able to connect to the Cisco Unified Communications Manager, but registration of device (Cisco Unity Connection port) was rejected.
+Recommended Action: Check that the device name is valid on the Cisco Unified Communications Manager server. If applicable, also ensure that the device security mode configured on Cisco Unified Communications Manager matches the device security mode configured on Cisco Unity Connection for this device.
+Alarm Name: EvtInitTlsConnectFailed
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1 failed to create a secure connection to Cisco Unified Communications Manager %2. Verify that the current Cisco Unity Connection Root Certificate was copied to that Cisco Unified Communications Manager, and that the Cisco Unified Communications Manager server was restarted. The certificate for this device is valid from %3 to %4, so verify that the current time on the Cisco Unified Communications Manager server falls within that range. Technical Details: %5.
+Route To: Event Log
+Explanation: Cisco Unity Connection port failed to create a secure connection to Cisco Unified Communications Manager.
+Recommended Action: Verify that the current Cisco Unity Connection Root Certificate was copied to the Cisco Unified Communications Manager, and that the Cisco Unified Communications Manager server was restarted. Verify that the certificate is valid.
+Alarm Name: EvtLoadDllError
+Severity: ERROR_ALARM
+Description: Unable to load library %1. Ensure that %1.so is on the system path.
+Route To: Event Log
+Explanation: Unable to load the library.
+Recommended Action: Ensure that the library is installed and on the system path.
+Alarm Name: EvtLogonSessionLimitExceeded
+Severity: WARNING_ALARM
+Description: Limit for the maximum concurrent %1 sessions, which is %2, for the subscriber %3 has reached.
+Route To: Event Log
+Explanation: Limit for the maximum concurrent sessions for the subscriber has reached.
+Recommended Action: Logout from one of the existing sessions.
+Alarm Name: EvtMbxOAuthDBHelperFailedToSetAccessToken
+Severity: INFORMATIONAL_ALARM
+Description: Successfully updated OAuth Access Token in Database for UMS [Display name= %1].
+Route To: Event Log
+Explanation: Successfully updated OAuth Access Token in Database for UMS.
+Recommended Action: No action necessary.
+Alarm Name: EvtMbxOAuthAccessTokenRefreshThreadFailed
+Severity: ERROR_ALARM
+Description: Failed to start Refresh Token thread.
+Route To: Event Log
+Explanation: Failed to start Refresh Token thread.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide available at https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/connection/12x/troubleshooting/guide/b_12xcuctsg.html
+Alarm Name: EvtMbxOAuthDBHelperFailedToSetAccessToken
+Severity: ERROR_ALARM
+Description: Failed to save OAuth Access Token in Database for UMS [Display name= %1].
+Route To: Event Log
+Explanation: Failed to save OAuth Access Token in Database for UMS.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide available at https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/connection/12x/troubleshooting/guide/b_12xcuctsg.html
+Alarm Name: EvtMbxOAuthDecryptionFailed
+Severity: ERROR_ALARM
+Description: Failed to decrypt the UMS Impersonation Account for %2 while fetching OAuth Access Token for UMS [Display name= %1].
+Route To: Event Log
+Explanation: Failed decryption for UMS Impersonation Account while fetching OAuth Access Token for UMS.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide available at https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/connection/12x/troubleshooting/guide/b_12xcuctsg.html
+Alarm Name: EvtMbxOAuthDecryptionFailed
+Severity: ERROR_ALARM
+Description: Failed to decrypt the UMS Impersonation Account for %2 while fetching OAuth Access Token for UMS [Display name= %1].
+Route To: Event Log
+Explanation: Failed decryption for UMS Impersonation Account while fetching OAuth Access Token for UMS.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide available at https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/connection/12x/troubleshooting/guide/b_12xcuctsg.html
+Alarm Name: EvtTUILogonSessionLimitExceeded
+Severity: WARNING_ALARM
+Description: : Limit for the maximum of concurrent %1 sessions, which is %2, for the subscriber %3 has reached.
+Route To: Event Log
+Explanation: Limit for the maximum concurrent sessions for the subscriber has reached.
+Recommended Action: Logout from one of the existing sessions.
+Alarm Name: EvtMgrComponentinitfail
+Severity: ERROR_ALARM
+Description: %1: Component %2 initialize failed. Turn on diagnostics for component %2 to troubleshoot. TECHNICAL DETAILS: Error: %3
+Route To: Event Log
+Explanation: Component failed to initialize.
+Recommended Action: Turn on diagnostics for component to troubleshoot.
+Alarm Name: EvtMgrComponentnotcreated
+Severity: ERROR_ALARM
+Description: %1: Component %2 not created from class %3. Verify that component %2 is registered. TECHNICAL DETAILS: Error: %4
+Route To: Event Log
+Explanation: Failed to create the component from class.
+Recommended Action: Turn on diagnostics for CuCsMgr and restart the Connection Conversation Manager service.
+Alarm Name: EvtMgrComponentpausefail
+Severity: ERROR_ALARM
+Description: %1: Component %2 pause failed.
+Route To: Event Log
+Explanation: Component failed to pause.
+Recommended Action: Turn on diagnostics for component to troubleshoot.
+Alarm Name: EvtMgrComponentrunfail
+Severity: ERROR_ALARM
+Description: %1: Component %2 run failed. Turn on diagnostics for component %2 to troubleshoot.
+Route To: Event Log
+Explanation: Component failed to run.
+Recommended Action: Turn on diagnostics for component to troubleshoot.
+Alarm Name: EvtMgrComponentstopfail
+Severity: ERROR_ALARM
+Description: %1: Component %2 stop failed.
+Route To: Event Log
+Explanation: Component failed to stop.
+Recommended Action: Turn on diagnostics for component to troubleshoot.
+Alarm Name: EvtMgrFailedtoinitialize
+Severity: ERROR_ALARM
+Description: %1 service failed to initialize the component manager.
+Route To: Event Log
+Explanation: Service failed to initialize the component manager.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMgrFailedtopause
+Severity: ERROR_ALARM
+Description: %1 service failed to pause the component manager.
+Route To: Event Log
+Explanation: Service failed to pause the component manager.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMgrFailedtorun
+Severity: ERROR_ALARM
+Description: %1 service failed to run the component manager.
+Route To: Event Log
+Explanation: Service failed to run the component manager.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMgrFailedtostop
+Severity: ERROR_ALARM
+Description: %1 service failed to stop the component manager.
+Route To: Event Log
+Explanation: Service failed to stop the component manager.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMgrStopped
+Severity: INFORMATIONAL_ALARM
+Description: %1 service stopped.
+Route To: Event Log
+Explanation: Service stopped.
+Recommended Action: None
+Alarm Name: EvtMgrVersionInfo
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection Version Information: Cisco Unity Connection version : %1. Domain name: %2. Computer name: %3. Windows version: %4. SQL version: %5. TSP version: %6. Installed Engineering Specials: %7
+Route To: Event Log
+Explanation: Cisco Unity Connection Version Information.
+Recommended Action: None
+Alarm Name: EvtMiuBusyHere
+Severity: WARNING_ALARM
+Description: Miu SIP Integration, All lines are busy on redirector %1. An incoming call will not be answered.
+Route To: Event Log
+Explanation: Miu SIP Integration finds all lines are busy on the redirector. An incoming call will not be answered.
+Recommended Action: Add more voice ports to the Cisco Unity Connection server. Check there are no locked ports in syslog.
+Alarm Name: EvtMiuCallLoopSupervisedTransferDetected
+Severity: ERROR_ALARM
+Description: Component Miu: Cisco Unity Connection port %1 has dropped the call because Cisco Unity Connection detected a call loop on a supervised transfer. If there are active calls being dropped and you see this message, you may want to disable the CallLoopSupervisedTransferDetect feature in Cisco Unity Connection Administration.
+Route To: Event Log
+Explanation: Component Miu: Cisco Unity Connection port has dropped the call because Cisco Unity Connection detected a call loop on a supervised transfer.
+Recommended Action: If there are active calls being dropped and you see this message, you may want to disable the CallLoopSupervisedTransferDetect feature in Cisco Unity Connection Administration.
+Alarm Name: EvtMiuCalloninactiveFailover
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 has detected an incoming call. This system is in inactive mode and is configured to fail over in this condition. Fail over to this system will occur, and the call will be answered.
+Route To: Event Log
+Explanation: Port has detected an incoming call. This system is in inactive mode and is configured to fail over in this condition. Fail over to this system will occur, and the call will be answered.
+Recommended Action: None
+Alarm Name: EvtMiuCalloninactiveFailoverFailure
+Severity: ERROR_ALARM
+Description: Port %1 has detected an incoming call. This system is in inactive mode and is configured to fail over in this condition. However, a serious failure occurred during the failover operation (%2), so the call will not be answered.
+Route To: Event Log
+Explanation: Port has detected an incoming call. This system is in inactive mode and is configured to fail over in this condition. However, a serious failure occurred during the failover operation, so the call will not be answered.
+Recommended Action: None
+Alarm Name: EvtMiuCalloninactiveFailoverWrongmode
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 has detected an incoming call. This system is in inactive mode but is not configured to fail over in this condition. The call will not be answered.
+Route To: Event Log
+Explanation: Port has detected an incoming call. This system is in inactive mode but is not configured to fail over in this condition. The call will not be answered.
+Recommended Action: None
+Alarm Name: EvtMiuCalloninactiveIgnored
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 has detected an incoming call. This system is in inactive mode and is not configured to fail over in this condition. The call will not be answered.
+Route To: Event Log
+Explanation: Port has detected an incoming call. This system is in inactive mode and is not configured to fail over in this condition. The call will not be answered.
+Recommended Action: None
+Alarm Name: EvtMiuCannotFindPort
+Severity: ERROR_ALARM
+Description: Miu SIP Integration, Cannot find the correct Connection Unity Connection port for an incoming call sent from [%1] to redirector %2.
+Route To: Event Log
+Explanation: Miu SIP Integration Cannot find the correct Cisco Unity Connection port for an incoming call sent to a redirector.
+Recommended Action: None
+Alarm Name: EvtMiuCatastrophicfailure
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a Failure in method %3 DESCRIPTION: %4.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureCallinfoLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. CALLINFO: %6.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureCallinfoSeqLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. CALLINFO: %6 CALL SEQUENCE: %7.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureDetail
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a Failure in method %3 DESCRIPTION: %4. DETAILS: %5.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureDetailCallinfoLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. DETAILS: %6. CALLINFO: %7.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureDetailCallinfoSeqLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. DETAILS: %6. CALLINFO: %7. CALL SEQUENCE: %8.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureDetailLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. DETAILS: %6.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureDetailSeq
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a Failure in method %3 DESCRIPTION: %4. DETAILS: %5. CALL SEQUENCE: %6.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureDetailSeqLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. DETAILS: %6. CALL SEQUENCE: %7.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureSeq
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuCatastrophicfailureSeqLine
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection's telephony component has encountered a serious error. EXPLANATION: A serious failure has occurred on port %1 during telephony processing. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly. TECHNICAL DETAILS: Thread %2 had a failure on port %3 in method %4 DESCRIPTION: %5. CALL SEQUENCE: %6.
+Route To: Event Log
+Explanation: Cisco Unity Connection's telephony component has encountered a serious error. Depending upon the severity of the failure, parties on this call could experience unexpected behavior or be disconnected. In some cases, further calls on this port will not be handled correctly.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuComponentinitfail
+Severity: ERROR_ALARM
+Description: Media component (%1) initialize failed (%2). Please Run "Check Telephone Configuration" task found in Cisco Unity Connection Administration, under Tools->Task Management->Check Telephone Configuration. Examine Report for errors.
+Route To: Event Log
+Explanation: Media component initialization failed.
+Recommended Action: To troubleshoot this problem, use Cisco Unity Connection Administration, under Tools->Task Management->Check Telephone Configuration. Examine Report for errors.
+Alarm Name: EvtMiuComponentinitfailCallevent
+Severity: ERROR_ALARM
+Description: Media component (Miu) initialize failed due to insufficient system resources. (Failed to create CallEvent). Please free up system resources and restart Cisco Unity Connection.
+Route To: Event Log
+Explanation: Media component (Miu) initialize failed due to insufficient system resources. (Failed to create CallEvent).
+Recommended Action: Restart Cisco Unity Connection.
+Alarm Name: EvtMiuComponentinitfailMiuloaddb
+Severity: ERROR_ALARM
+Description: Media component (Miu) initialize failed: Failed to load data SQL. TECHNICAL DETAILS: %s
+Route To: Event Log
+Explanation: Media component (Miu) initialization failed: Failed to load data SQL.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuComponentinitfailMiuPortsinited
+Severity: INFORMATIONAL_ALARM
+Description: Port Group [%1] initialized %2 ports successfully.
+Route To: Event Log
+Explanation: Port Group initialized successfully.
+Recommended Action: None
+Alarm Name: EvtMiuComponentinitfailNotuninitstate
+Severity: ERROR_ALARM
+Description: Media component (Miu) initialize failed because Cisco Unity Connection was not properly shutdown prior to restarting. Using Cisco Unity Connection Serviceability, Tools->Control Center->Restart All of Cisco Unity Connection. Reboot the system if necessary.
+Route To: Event Log
+Explanation: Media component (Miu) initialization failed because Cisco Unity Connection was not properly shutdown prior to restarting.
+Recommended Action: Use Cisco Unity Connection Serviceability, Tools->Control Center->Restart All of Cisco Unity Connection. Reboot the system if necessary.
+Alarm Name: EvtMiuComponentinitfailSeckey
+Severity: ERROR_ALARM
+Description: Media component (Miu) initialize failed. Unable to read data from the license server. To troubleshoot this problem, open the Cisco Unity Connection Administration, under System->Licensing->License Unit Report examine number of license Units. (internal failure code=%1).
+Route To: Event Log
+Explanation: Media component (Miu) initialization failed. Unable to read data from the license server.
+Recommended Action: To troubleshoot this problem, use the Cisco Unity Connection Administration, under System->Licensing->License Unit Report examine number of license Units.
+Alarm Name: EvtMiuComponentinitok
+Severity: INFORMATIONAL_ALARM
+Description: Media component %1 initialize succeeded.
+Route To: Event Log
+Explanation: Media component initialization succeeded.
+Recommended Action: None
+Alarm Name: EvtMiuComponentinitokNoports
+Severity: WARNING_ALARM
+Description: Media component (%1) initialize succeeded, but no ports are available. Cisco Unity Connection will not be able to process any incoming or outgoing calls with no media ports. Please ensure that the license file contains media ports and that an integration is installed.
+Route To: Event Log
+Explanation: Media component initialize succeeded, but no ports are available. Cisco Unity Connection will not be able to process any incoming or outgoing calls with no media ports.
+Recommended Action: Please ensure that the license file contains media ports and that an integration is installed.
+Alarm Name: EvtMiuCurrentRecordFormat
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection is using %1 as the record format for all messages and greetings.
+Route To: Event Log
+Explanation: Cisco Unity Connection is using given record format for all messages and greetings.
+Recommended Action: None
+Alarm Name: EvtMiuDBWriterSQLExecError
+Severity: ERROR_ALARM
+Description: Media component (Miu) DBWriter encountered the following error executing SQL: %1. SprocRequest=[%2]
+Route To: Event Log
+Explanation: Media component (Miu) DBWriter encountered an error executing SQL.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuDBWriterUnrecoverableError
+Severity: ERROR_ALARM
+Description: Media component (Miu) DBWriter encountered an error from which it cannot recover. %1
+Route To: Event Log
+Explanation: Media component (Miu) DBWriter encountered an error from which it cannot recover.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuErrorSetPerfCounters
+Severity: ERROR_ALARM
+Description: Component Miu was unable to set performance counters. Context: %1
+Route To: Event Log
+Explanation: Component Miu was unable to set performance counters.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuFailLicenseConfiguredportsMismatch
+Severity: ERROR_ALARM
+Description: The number of configured voice ports exceeds the licensed voice ports. Only %1 voice ports will be initialized.
+Route To: Event Log
+Explanation: The number of configured voice ports exceeds the licensed voice ports. Only licensed voice ports will be initialized.
+Recommended Action: To troubleshoot this problem, use the Cisco Unity Connection Administration, under System->Licensing->License Unit Report examine number of license Units.
+Alarm Name: EvtMiuFailtoAuthenticate
+Severity: ERROR_ALARM
+Description: Miu SIP Integration failed to authenticate while attempting to register. Verify that the Cisco Unity Connection and SIP proxy configuration server user names and passwords are correct.
+Route To: Event Log
+Explanation: Miu SIP Integration failed to authenticate while attempting to register.
+Recommended Action: Verify that the Cisco Unity Connection and SIP proxy configuration server user names and passwords are correct.
+Alarm Name: EvtMiuFailtoRegisterpimg2
+Severity: ERROR_ALARM
+Description: Component Miu SIP Integration failed to maintain contact with PIMG %1 (Cisco Unity Connection port group %2). Check Cisco Unity Connection SIP configuration and PIMG status.
+Route To: Event Log
+Explanation: Component Miu SIP Integration failed to maintain contact with PIMG.
+Recommended Action: Check Cisco Unity Connection SIP configuration and PIMG status.
+Alarm Name: EvtMiuFailtoRegisterproxy2
+Severity: ERROR_ALARM
+Description: Miu SIP Integration failed to register with proxy %1 using contact line name %2 (Cisco Unity Connection port group %3). Verify the SIP proxy server is running and the IP address and IP port are correctly identified for Cisco Unity Connection and SIP proxy servers.
+Route To: Event Log
+Explanation: Miu SIP Integration failed to register with proxy.
+Recommended Action: Verify the SIP proxy server is running and the IP address and IP port are correctly identified for Cisco Unity Connection and SIP proxy servers.
+Alarm Name: EvtMiuNetworkError
+Severity: ERROR_ALARM
+Description: Miu SIP Integration, Problem initializing the network connection. Check Cisco Unity Connection SIP configuration.
+Route To: Event Log
+Explanation: Miu SIP Integration finds problem initializing the network connection.
+Recommended Action: Check Cisco Unity Connection SIP configuration.
+Alarm Name: EvtMiuNodiag
+Severity: ERROR_ALARM
+Description: Component diagnostic setting: %1, not found. Component initialization has failed.
+Route To: Event Log
+Explanation: Component diagnostic setting not found. Component initialization has failed.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuPortGroupInitialized
+Severity: INFORMATIONAL_ALARM
+Description: Media component (Miu) Port group '%1' successfully initialized %2 ports.
+Route To: Event Log
+Explanation: Media component (Miu) Port group successfully initialized ports.
+Recommended Action: None
+Alarm Name: EvtMiuPortStuckWithCallinfoOnly
+Severity: ERROR_ALARM
+Description: Port %1 has been busy since %2. The system threshold is %3 minutes, indicating that this port is currently unavailable and may be unable to handle further calls. CALLINFO: %4. Additional Info: %5
+Route To: Event Log
+Explanation: Port is busy and is currently unavailable, it may be unable to handle further calls.
+Recommended Action: None
+Alarm Name: EvtMiuRejectforwardnotificationOccurred
+Severity: ERROR_ALARM
+Description: Component Miu: Cisco Unity Connection port %1 has dropped the call because Cisco Unity Connection detected a forwarded notification. If there are active calls being dropped and you see this message, you may want to disable the CallLoopRejectForwardNotificationDetect feature in Cisco Unity Connection Administration.
+Route To: Event Log
+Explanation: Component Miu: Cisco Unity Connection port has dropped the call because Cisco Unity Connection detected a forwarded notification.
+Recommended Action: If there are active calls being dropped and you see this message, you may want to disable the CallLoopRejectForwardNotificationDetect feature in Cisco Unity Administration.
+Alarm Name: EvtMiuSipmiuMwiPimgBadaddr
+Severity: ERROR_ALARM
+Description: Component Miu: Cisco Unity Connection port %1 (PIMG %2) failed to toggle an MWI for extension %3 to state %4. The extension can be dialed. Check whether this is a valid extension, and whether the port and PIMG are configured and operating properly.
+Route To: Event Log
+Explanation: Component Miu: Cisco Unity Connection port failed to toggle an MWI for a given extension. The extension can be dialed.
+Recommended Action: Check whether this is a valid extension, and whether the port and PIMG are configured and operating properly.
+Alarm Name: EvtMiuSipmiuMwiPimgNotavail
+Severity: ERROR_ALARM
+Description: Component Miu: Cisco Unity Connection port %1 (PIMG %2) failed to toggle an MWI for extension %3 to state %4. This port on the PIMG cannot be reached. Check the status and configuration for both the port and the PIMG.
+Route To: Event Log
+Explanation: Component Miu: Cisco Unity Connection port failed to toggle an MWI for a given extension. This port on the PIMG cannot be reached.
+Recommended Action: Check the status and configuration for both the port and the PIMG.
+Alarm Name: EvtMiuSipmiuMwiProxyBadaddr
+Severity: ERROR_ALARM
+Description: Component Miu: Cisco Unity Connection port %1 (Proxy %2) failed to toggle an MWI for extension %3 to state %4. The extension can be dialed. Check whether this is a valid extension, and whether the port and proxy server are configured or operating properly.
+Route To: Event Log
+Explanation: Component Miu: Cisco Unity Connection port failed to toggle an MWI for a given extension. The extension can be dialed.
+Recommended Action: Check whether this is a valid extension, and whether the port and proxy server are configured or operating properly.
+Alarm Name: EvtMiuSipmiuMwiProxyNotavail
+Severity: ERROR_ALARM
+Description: Component Miu: Cisco Unity Connection port %1 (Proxy %2) failed to toggle an MWI for extension %3 to state %4. This port on the proxy server cannot be reached. Check the status and configuration for both the port and the proxy server.
+Route To: Event Log
+Explanation: Component Miu: Cisco Unity Connection port failed to toggle an MWI for a given extension. This port on the proxy server cannot be reached.
+Recommended Action: Check the status and configuration for both the port and the proxy server.
+Alarm Name: EvtMiuSipNoDTMF
+Severity: WARNING_ALARM
+Description: Miu SIP Integration, No DTMF method negotiated for call from %1. This means there is no keypad interaction for this call.
+Route To: Event Log
+Explanation: Miu SIP Integration was not able to find a common DTMF method for this call. While the call will proceed, there is no keypad interaction for this call.
+Recommended Action: SIP Integration supports RFC2833 and KPML DTMF methods, make sure calling endpoint supports one of these. Also check Media Port Group settings for configuration of these DTMF methods.
+Alarm Name: EvtMiuSuccessRegisterpimg2
+Severity: INFORMATIONAL_ALARM
+Description: Component Miu SIP Integration succeeded in contacting PIMG %1 (Cisco Unity Connection port group %2).
+Route To: Event Log
+Explanation: Component Miu SIP Integration succeeded in contacting PIMG.
+Recommended Action: None
+Alarm Name: EvtMiuSuccessRegisterproxy2
+Severity: INFORMATIONAL_ALARM
+Description: Miu SIP Integration succeeded in registering with proxy %1 using contact line name %2 (Cisco Unity Connection port group %3).
+Route To: Event Log
+Explanation: Miu SIP Integration succeeded in registering with proxy.
+Recommended Action: None
+Alarm Name: EvtMiuTtsLoadFailed
+Severity: ERROR_ALARM
+Description: Component Miu: Failed to load Text To Speech Component. The Text To Speech feature will be disabled.
+Route To: Event Log
+Explanation: Component Miu failed to load Text To Speech Component. The Text To Speech feature will be disabled.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMiuTtsNoLicense
+Severity: INFORMATIONAL_ALARM
+Description: Component Miu: There were no TTS licenses available for the call on port %1. Possible causes are all available TTS licenses were in use or there are no TTS licenses in the license file.
+Route To: Event Log
+Explanation: Component Miu detected problem in the TTS system -- There were no TTS licenses available. Possible causes are all available TTS licenses were in use or there are no TTS licenses in the license file.
+Recommended Action: None
+Alarm Name: EvtMiuTtsRestarted
+Severity: ERROR_ALARM
+Description: Component Miu: Problem detected in the TTS system -- it has been restarted.
+Route To: Event Log
+Explanation: Component Miu detected problem in the TTS system -- it has been restarted.
+Recommended Action: None
+Alarm Name: EvtMiuWaveioSilenceLeadingTimeout
+Severity: INFORMATIONAL_ALARM
+Description: [Port %1] Recording stopped due to leading silence time out.
+Route To: Event Log
+Explanation: Recording stopped due to leading silence time out.
+Recommended Action: None
+Alarm Name: EvtMsgAllportsbusy
+Severity: INFORMATIONAL_ALARM
+Description: All Answer Ports Busy detected.
+Route To: Event Log
+Explanation: All Answer Ports Busy detected.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgBeginMbxResynch
+Severity: INFORMATIONAL_ALARM
+Description: Begin resynchronizing user mailboxes. %1 mailboxes are scheduled for synchronization. (Sequence #%2)
+Route To: Event Log
+Explanation: Begin resynchronizing user mailboxes.
+Recommended Action: None
+Alarm Name: EvtMsgBeginSwitchResynch
+Severity: INFORMATIONAL_ALARM
+Description: Begin resynchronizing user mailboxes with MWI on switch %1. %2 mailboxes are scheduled for synchronization. (Sequence #%3)
+Route To: Event Log
+Explanation: Begin resynchronizing user mailboxes with MWI.
+Recommended Action: None
+Alarm Name: EvtMsgCallFromVm
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 has received a forwarded call originating from another Cisco Unity Connection port. Cisco Unity Connection is configured to not accept calls from itself, so the call will be dropped.
+Route To: Event Log
+Explanation: Port has received a forwarded call originating from another Cisco Unity Connection port. Cisco Unity Connection is configured to not accept calls from itself, so the call will be dropped.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgCallOnNoanswerPort
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 has received an incoming call. This port is configured to not answer incoming calls, so the call will be ignored.
+Route To: Event Log
+Explanation: Port has received an incoming call. This port is configured to not answer incoming calls, so the call will be ignored.
+Recommended Action: None
+Alarm Name: EvtMsgContinuedcallRoutingFailed
+Severity: ERROR_ALARM
+Description: [%1] Failed routing a continued call to application [%2] with data object type [%3]. Routing call to the default error rule instead.
+Route To: Event Log
+Explanation: Failed routing a continued call to an application. Routing call to the default error rule instead.
+Recommended Action: Verify that the routing rules are correct.
+Alarm Name: EvtMsgCreateworkerthreadFailed
+Severity: ERROR_ALARM
+Description: Unable to create all necessary port threads. This could happen if the system is low on virtual memory. Close some applications and restart Unity.
+Route To: Event Log
+Explanation: Unable to create all necessary port threads. This could happen if the system is low on virtual memory.
+Recommended Action: Restart Cisco Unity Connection.
+Alarm Name: EvtMsgCuEncryptLoadFailure
+Severity: ERROR_ALARM
+Description: Connection System Agent failed while loading CuEncrypt. Error message %1. See the diagnostic log for more information.
+Route To: Event Log
+Explanation: Connection System Agent failed while loading CuEncrypt.
+Recommended Action: See the trace log for more information.
+Alarm Name: EvtMsgCuEncryptReturnFailure
+Severity: ERROR_ALARM
+Description: CuEncrypt returned a failure, or bad values were passed back while retrieving credentials. Return code %1. See the diagnostic log for more information.
+Route To: Event Log
+Explanation: CuEncrypt returned a failure, or bad values were passed back while retrieving credentials.
+Recommended Action: See the diagnostic log for more information.
+Alarm Name: EvtMsgDeliveryResourcesFailure
+Severity: ERROR_ALARM
+Description: Notification failure for %1 %2 due to lack of a suitable port for dialing out. Phone number to dial: %3, Switch ID: %4. Use Cisco Unity Connection Administration to check the port configuration.
+Route To: Event Log
+Explanation: Notification failure due to lack of a suitable port for dialing out.
+Recommended Action: Use Cisco Unity Connection Administration to check the port configuration.
+Alarm Name: EvtMsgEndMbxResynch
+Severity: INFORMATIONAL_ALARM
+Description: Finished resynchronizing user mailboxes. %1 mailboxes have been resynchronized. (Sequence #%2)
+Route To: Event Log
+Explanation: Finished resynchronizing user mailboxes.
+Recommended Action: None
+Alarm Name: EvtMsgEndSwitchResynch
+Severity: INFORMATIONAL_ALARM
+Description: Finished resynchronizing user mailboxes with MWI on switch %1. %2 mailboxes have been resynchronized. (Sequence #%3)
+Route To: Event Log
+Explanation: Finished resynchronizing user mailboxes with MWI.
+Recommended Action: None
+Alarm Name: EvtMsgErrorInitializingObject
+Severity: ERROR_ALARM
+Description: Could not initialize object (%1). Turn on Notifier/Initialization traces to troubleshoot.
+Route To: Event Log
+Explanation: Could not initialize object.
+Recommended Action: Turn on Notifier/Initialization traces to troubleshoot.
+Alarm Name: EvtMsgExceptionError
+Severity: ERROR_ALARM
+Description: Fatal error: Exception caught in %1.
+Route To: Event Log
+Explanation: Fatal error: Exception caught.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgFindtaggedcomponentFailed
+Severity: ERROR_ALARM
+Description: Unable to get the named component %1 from the Conversation Manager.
+Route To: Event Log
+Explanation: Unable to get the named component from the Conversation Manager.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgLicErrorUnexpectedException
+Severity: ERROR_ALARM
+Description: There was an unexpected issue in %1 while retrieving license information. If this issue persists, please contact technical support.
+Route To: Event Log
+Explanation: There was an unexpected issue while retrieving license information.
+Recommended Action: If this issue persists, please contact technical support.
+Alarm Name: EvtMsgMemoryError
+Severity: ERROR_ALARM
+Description: Fatal memory error. The system may be low on virtual memory. Close applications and restart Cisco Unity Connection.
+Route To: Event Log
+Explanation: Fatal memory error. The system may be low on virtual memory.
+Recommended Action: Close applications and restart Cisco Unity Connection.
+Alarm Name: EvtMsgMiuPortOnline
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 was in a failure state but it received an incoming call. It will no longer be prevented from being used for dialing out.
+Route To: Event Log
+Explanation: Port was in a failure state but it received an incoming call. It will no longer be prevented from being used for dialing out.
+Recommended Action: None
+Alarm Name: EvtMsgMWICodesNotConfigured
+Severity: ERROR_ALARM
+Description: Port %1 is configured to perform MWI and its port group allows MWI but the port group has no MWI codes configured. No MWI will go out on this port.
+Route To: Event Log
+Explanation: This is an inconsistency with the desired functionality of this port. The port is configured to perform MWI and is on a port group that allows MWI but that port group has no MWI codes configured.
+Recommended Action: If it is desired that the port be used for MWI, add the MWI codes on the Port Group page in Cisco Unity Administration. If it is desired that the port not be used for MWI, either disable MWI for the Port Group or disable MWI for the port.
+Alarm Name: EvtMsgMwiFailureResources
+Severity: ERROR_ALARM
+Description: Failed to set message waiting lamp for %1, ext %2, switch %3, reason: no suitable port. Use Cisco Unity Connection Administration to verify the MWI port configuration.
+Route To: Event Log
+Explanation: Failed to set message waiting lamp, reason: no suitable port.
+Recommended Action: Use Cisco Unity Connection Administration to verify the MWI port configuration.
+Alarm Name: EvtMsgMwiFailureSetmwi
+Severity: ERROR_ALARM
+Description: Failed to set message waiting lamp for %1, ext %2, switch %3. TECHNICAL DETAILS: SetMWI failed with %4.
+Route To: Event Log
+Explanation: Failed to set message waiting lamp.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgNodiag
+Severity: INFORMATIONAL_ALARM
+Description: Component diagnostic setting %1 not found. Diagnostics are disabled.
+Route To: Event Log
+Explanation: Component diagnostic setting not found. Diagnostics are disabled.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgNoMbxResynch
+Severity: INFORMATIONAL_ALARM
+Description: Discarding request to resynchronize user mailboxes due to resynchronize already in progress.
+Route To: Event Log
+Explanation: Discarding request to resynchronize user mailboxes due to resynchronize already in progress.
+Recommended Action: None
+Alarm Name: EvtMsgNoMsgdlvPorts
+Severity: WARNING_ALARM
+Description: No ports found with Message Delivery capabilities. No Message Delivery dialouts will occur. If this is unexpected, use Cisco Unity Connection Administration to change the port capabilities.
+Route To: Event Log
+Explanation: No ports found with Message Delivery capabilities. No Message Delivery dialouts will occur.
+Recommended Action: If this is unexpected, use Cisco Unity Connection Administration to change the port capabilities.
+Alarm Name: EvtMsgNoMwiPorts
+Severity: WARNING_ALARM
+Description: No ports found with MWI capabilities. No message waiting lamp dialouts will occur. If this is unexpected, use Cisco Unity Connection Administration to change the port capabilities. Note that serial and some digital MWI do not require dialouts.
+Route To: Event Log
+Explanation: No ports found with MWI capabilities. No message waiting lamp dialouts will occur.
+Recommended Action: If this is unexpected, use Cisco Unity Connection Administration to change the port capabilities.
+Alarm Name: EvtMsgNoPagerPorts
+Severity: ERROR_ALARM
+Description: No ports found with Message Delivery capabilities. No Pager dialouts will occur. If this is unexpected, use Cisco Unity Connection Administration to change the port capabilities. Note that Text Pager notifications do not require dialouts.
+Route To: Event Log
+Explanation: No ports found with Message Delivery capabilities. No Pager dialouts will occur.
+Recommended Action: If this is unexpected, use Cisco Unity Connection Administration to change the port capabilities. Note that Text Pager notifications do not require dialouts.
+Alarm Name: EvtMsgNoSwitchResynch
+Severity: INFORMATIONAL_ALARM
+Description: Discarding request to resynchronize user mailboxes with MWI on switch %1 due to resynchronize already in progress.
+Route To: Event Log
+Explanation: Discarding request to resynchronize user mailboxes with MWI due to resynchronize already in progress.
+Recommended Action: None
+Alarm Name: EvtMsgPusheventfailed
+Severity: ERROR_ALARM
+Description: Failed to send result of notification to Connection Notifier (error=%1). The system may be low on virtual memory. Close applications and restart Cisco Unity Connection.
+Route To: Event Log
+Explanation: Failed to send result of notification to Connection Notifier. The system may be low on virtual memory.
+Recommended Action: Restart Cisco Unity Connection.
+Alarm Name: EvtMsgQueryinterfaceFailed
+Severity: ERROR_ALARM
+Description: Unable to get the %1 interface.
+Route To: Event Log
+Explanation: Component doesn't support the expected interface.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMsgRecordingDiscarded
+Severity: INFORMATIONAL_ALARM
+Description: A message recording was discarded for not meeting the minimum recording length of [%1]. Message details: %2
+Route To: Event Log
+Explanation: A message recording was expected, but nothing of sufficient length to constitute a valid message was recorded. This may occur is the caller remains silent when asked to record, or if the caller hangs up shortly after the record beep is played.
+Recommended Action: None
+Alarm Name: EvtMsgRegResourceVpFailed
+Severity: ERROR_ALARM
+Description: Failed to register resource 'voice ports', hr=[%1]. Turn on ResourceManager diagnostics to troubleshoot.
+Route To: Event Log
+Explanation: Failed to register resource 'voice ports'.
+Recommended Action: Turn on ResourceManager diagnostics to troubleshoot.
+Alarm Name: EvtMsgResourceDisabled
+Severity: ERROR_ALARM
+Description: Port %1 temporarily disabled. Dialouts will not go out on this port temporarily.
+Route To: Event Log
+Explanation: Port temporarily disabled. Dialouts will not go out on this port temporarily.
+Recommended Action: None
+Alarm Name: EvtMsgResourceReenabled
+Severity: INFORMATIONAL_ALARM
+Description: Port %1 re-enabled after being temporarily disabled. Dialouts will resume on this port.
+Route To: Event Log
+Explanation: Port re-enabled after being temporarily disabled. Dialouts will resume on this port.
+Recommended Action: None
+Alarm Name: EvtMsgRoutingtableFindFailed
+Severity: ERROR_ALARM
+Description: [%1] No rule could be found in the call routing table starting at rule %2 to satisfy the call.
+Route To: Event Log
+Explanation: No rule could be found in the call routing table to satisfy the call.
+Recommended Action: Verify that default routing rules rule exists.
+Alarm Name: EvtMsgStopTakingCalls
+Severity: INFORMATIONAL_ALARM
+Description: Administrator initiated Stop Taking Calls Action.
+Route To: Event Log
+Explanation: Administrator initiated Stop Taking Calls Action.
+Recommended Action: None
+Alarm Name: EvtMsgThreadGetnewcallFailed
+Severity: ERROR_ALARM
+Description: Request for a new call failed, hr=[%1]. Turn on MIU diagnostics to troubleshoot.
+Route To: Event Log
+Explanation: Request for a new call failed.
+Recommended Action: Turn on MIU diagnostics to troubleshoot.
+Alarm Name: EvtMsgWarnErrorAlert
+Severity: ERROR_ALARM
+Description: The periodic task %1 generated either an error or warning alert. See https://%2/cuadmin/task-definition.do?op=readResults&objectId=%3&vmsServerObjectId=%4 for more information.
+Route To: Event Log
+Explanation: The periodic task generated either an error or warning alert.
+Recommended Action: See Cisco Unity Connection Administration for more information.
+Alarm Name: EvtMtaDbeventException
+Severity: ERROR_ALARM
+Description: Unexpected exception thrown in DBEvent Client. Exception %1. Read-receipt generation will be delayed up to 1 minute.
+Route To: Event Log
+Explanation: Unexpected exception thrown in DBEvent Client. Read-receipt generation will be delayed up to 1 minute.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMtaDbeventInit
+Severity: ERROR_ALARM
+Description: The connection to Connection DB Event Publisher could not be initialized. Function Name=%1. Error Code=%2. Read-receipt generation will be delayed up to 1 minute.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher could not be initialized. Read-receipt generation will be delayed up to 1 minute.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMtaDbeventRestart
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been re-established.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been re-established.
+Recommended Action: None
+Alarm Name: EvtMtaDbeventStart
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been established.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been established.
+Recommended Action: None
+Alarm Name: EvtMtaDbeventStop
+Severity: ERROR_ALARM
+Description: The connection to Connection DB Event Publisher has been broken. Read-receipt generation will be delayed up to 1 minute.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been broken. Read-receipt generation will be delayed up to 1 minute.
+Recommended Action: None
+Alarm Name: EvtMtaImportRecpDeliverError
+Severity: ERROR_ALARM
+Description: The message could not be imported because message delivery failed for the recipient (%1). Message delivery can fail for various reasons, which include the recipient mailbox being over quota, or the recipient mailbox being dismounted. See the MTA trace log for more information. Message Sender=%2.
+Route To: Event Log
+Explanation: The message could not be imported because message delivery failed for the recipient. Message delivery can fail for various reasons, which include the recipient mailbox being over quota, or the recipient mailbox being dismounted.
+Recommended Action: See the MTA trace log for more information.
+Alarm Name: EvtMtaImportRecpResolveError
+Severity: ERROR_ALARM
+Description: The message could not be imported because message recipient (%1) could not be resolved. Message Sender=%2.
+Route To: Event Log
+Explanation: The message could not be imported because message recipient could not be resolved.
+Recommended Action: None
+Alarm Name: EvtMtaStartupConfigfileError
+Severity: ERROR_ALARM
+Description: MTA could not read its configuration file. Exception caught (%1). The MTA service is being stopped.
+Route To: Event Log
+Explanation: MTA could not read its configuration file. Exception caught. The MTA service is being stopped.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMtaStartupDirectoryError
+Severity: ERROR_ALARM
+Description: The MTA either could not create or could not validate its file system directory. Exception caught (%1). The MTA service is being stopped.
+Route To: Event Log
+Explanation: The MTA either could not create or could not validate its file system directory. Exception caught. The MTA service is being stopped.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMtaStartupEncryptError
+Severity: ERROR_ALARM
+Description: The MTA could not get server credentials from CuEncrypt. CuEncrypt error code=%1. The MTA service is being stopped.
+Route To: Event Log
+Explanation: The MTA could not get server credentials from CuEncrypt. The MTA service is being stopped.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMtaStartupSqlerror
+Severity: ERROR_ALARM
+Description: MTA could not read configuration data from the Cisco Unity Connection database because a connection to the database could not be initialized. The MTA service is being stopped.
+Route To: Event Log
+Explanation: MTA could not read configuration data from the Cisco Unity Connection database because a connection to the database could not be initialized. The MTA service is being stopped.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtMtaStartupSqlPropError
+Severity: ERROR_ALARM
+Description: The MTA could not get a configuration property name from the Cisco Unity Connection database (%1). This property either is not set properly or is missing. The MTA service is being stopped.
+Route To: Event Log
+Explanation: The MTA could not get a configuration property name from the Cisco Unity Connection database. This property either is not set properly or is missing. The MTA service is being stopped.
+Recommended Action: Verify MTA properties in the database.
+Alarm Name: EvtMtaUnexpectedException
+Severity: ERROR_ALARM
+Description: Unexpected exception thrown in %1. This event may be helpful for troubleshooting in conjunction with other events. Technical details: %2.
+Route To: Event Log
+Explanation: Unexpected exception thrown. This event may be helpful for troubleshooting in conjunction with other events.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtNetworkRemoverError
+Severity: ERROR_ALARM
+Description: Task 'Remove Objects Associated With Deleted Remote Sites' failed to remove location %2, encountered following error %1.
+Route To: Sys Log, Alert log, Event Log
+Explanation: TThe 'Remove Objects Associated With Deleted Remote Sites' task encountered an error. This may be a result of other activity on the system. The next run of the task may not encounter the same issue.
+Recommended Action: Wait for the 'Remove Objects Associated With Deleted Remote Sites' task to run again to see if errors continue.
+Alarm Name: EvtNetworkRemoverFailure
+Severity: WARNING_ALARM
+Description: Location %1 removal failed, not all objects from this location could be removed.
+Route To: Sys Log, Alert log, Event Log
+Explanation: The remote site/HTTPS location link cannot be deleted because all the objects synchronized with the remote site/HTTPS location have not been removed.
+Recommended Action: Check the diagnostic logs to determine which objects could not be removed. Resolve any issues with those objects and run the removal task again.
+Alarm Name: EvtNetworkRemoverObjectInUse
+Severity: ERROR_ALARM
+Description: Task 'Remove Objects Associated With Deleted Remote Sites' failed to remove %1 objects of location %2.
+Route To: Event Log, Sys Log
+Explanation: The objects could not be removed because other objects in the system are referring to those objects.
+Recommended Action: Find the objects that could not be removed and then look for references to those objects from other objects in the system.
+Alarm Name: EvtNoCodecsConfigured
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: This device has been configured to support no codecs. This device is incapable of sending or receiving audio.
+Route To: Event Log
+Explanation: Cisco Unity Connection port has been configured to support no codecs. This device is incapable of sending or receiving audio.
+Recommended Action: If this is not expected, use Cisco Unity Connection Administration to add codec support to the port.
+Alarm Name: EvtNohelpForMoreInfoClick
+Severity: ERROR_ALARM
+Description: For more information, click: %1
+Route To: Event Log
+Explanation: Link with information
+Recommended Action: None
+Alarm Name: EvtNonTerminalError
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) encountered an unexpected error. Thread has recovered and will continue normal operation. Error: %3.
+Route To: Event Log
+Explanation: Database synchronization thread encountered an unexpected error. Thread has recovered and will continue normal operation.
+Recommended Action: None
+Alarm Name: EvtPartialSkinnyMessage
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection SCCP integration: Warning: A voice mail port detected an incomplete message from the Cisco Unified Communications Manager. This can indicate packet loss or other network problems. Please troubleshoot the network to ensure connectivity and data integrity between Cisco Unity Connection and Cisco Unified Communications Manager.
+Route To: Event Log
+Explanation: Cisco Unity Connection SCCP integration: Warning: A voice mail port detected an incomplete message from the Cisco Unified Communications Manager. This can indicate packet loss or other network problems.
+Recommended Action: Please troubleshoot the network to ensure connectivity and data integrity between Cisco Unity Connection and Cisco Unified Communications Manager.
+Alarm Name: EvtPhNullPointer
+Severity: ERROR_ALARM
+Description: Invalid data (a NULL pointer) found. This is a fatal condition and is not expected. Possible reasons for failure could be data link corruptions or a corrupted stack or memory. TECHNICAL DETAILS: Method %1 returned a NULL pointer on line %2 of file %3.
+Route To: Event Log
+Explanation: Invalid data (a NULL pointer) found. This is a fatal condition and is not expected. Possible reasons for failure could be data link corruptions or a corrupted stack or memory.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtPsDiagMsg
+Severity: INFORMATIONAL_ALARM
+Description: %1
+Route To: Event Log
+Explanation: Information only
+Recommended Action: None
+Alarm Name: EvtReaderDirectoryException
+Severity: ERROR_ALARM
+Description: Directory synchronization with remote site/HTTPS location %1 did not complete because an internal error occurred during synchronization. Error Message: %2
+Route To: Sys Log, Alert log, Event Log
+Explanation: Directory synchronization encountered an internal processing error.
+Recommended Action: Check the CuSysAgent diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtReaderDirectoryFeedAccessError
+Severity: ERROR_ALARM
+Description: Directory synchronization with remote site/HTTPS location %1 did not complete because the intersite bridgehead/HTTPS location returned an error during object feed retrieval (code=%2, message=%3)
+Route To: Sys Log, Alert Log, Event Log
+Explanation: The intersite bridgehead/HTTPS location object feed contains the directory information necessary to allow addressing messages to users on remote site/locations. An error during object feed retrieval prevents full synchronization with the remote site/location.br> Recommended Action: Use the status code and message to determine the source of the error from the remote web server.
+Alarm Name: EvtReaderDirectoryNoSMTPDomain
+Severity: ERROR_ALARM
+Description: Directory synchronization with remote site %1 did not complete because the intersite bridgehead/HTTPS location did not define an SMTP domain.
+Route To: Sys Log, Alert Log, Event Log
+Explanation: The SMTP domain is necessary to address and transfer messages between locations. Synchronization will not be possible until the SMTP domain is configured on the remote site/location.
+Recommended Action: Check the CuSysAgent diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtReaderDirectoryOverflow
+Severity: WARNING_ALARM
+Description: Directory size at location %1 has reached 100 percent of capacity while syncing with location %2.
+Route To: Sys Log, Alert Log, Event Log
+Explanation: The number of directory objects at this location has reached the supported limit.
+Recommended Action: Remove unwanted objects such as users, contacts, distribution lists from network to come out of this condition.
+Alarm Name: EvtReaderDirectoryRecoverFromOverflow
+Severity: INFORMATIONAL_ALARM
+Description: Directory size at location %1 has recovered from warning while syncing with location %2.
+Route To: Sys Log, Alert Log, Event Log
+Explanation: The number of directory objects that have been restored from the warning limit and the Reader is working in normal mode.
+Recommended Action: None
+Alarm Name: EvtReaderFullSyncMaxRetries
+Severity: ERROR_ALARM
+Description: Location %1 has encountered Out Of Memory error even after the maximum number of retries while syncing with location %2.
+Route To: Sys Log, Event Log
+Explanation: Reader was unable to process the object feed received with the configured feed size even after reducing it by 10 times.
+Recommended Action: Check Heap Size and Heap related errors.
+Alarm Name: EvtReaderInfoFeedError
+Severity: ERROR_ALARM
+Description: Directory synchronization with remote site/HTTPS location %1 failed because the remote information URL %2 could not be accessed.
+Route To: Sys Log, Alert Log, Event Log
+Explanation: The synchronization task attempts to download the status of the remote site/location, but this status information was not available at this time.
+Recommended Action: Check the availability of the remote site/location and logs for access errors on the URL.
+Alarm Name: EvtReaderLocationBusy
+Severity: ERROR_ALARM
+Description: Failed to remove a remote location %1 belonging to the remote site %2.
+Route To: Event Log
+Explanation: The remote location belonging to the remote site no longer exists on the remote site, but we cannot remove it because we have directory objects associated with that location.
+Recommended Action: Examine all objects associated with the remote location and check to see if any of them are referenced by call handlers, or directory handlers. Change the referenced objects to another user and run the synchronization task again.
+Alarm Name: EvtReaderNetworkLoopDetected
+Severity: ERROR_ALARM
+Description: Detected loop in HTTPS network for location %1. The location is already part of network through location %2, location is now received again through location %3.
+Route To: Sys Log, Alert log, Event Log
+Explanation: While processing object changes, Reader failed to apply those changes as it detected network loop.
+Recommended Action: Check the HTTPS network structure or Network Map to locate the location that is creating loop.
+Alarm Name: EvtReaderNotFound
+Severity: ERROR_ALARM
+Description: Directory synchronization with a remote site/HTTPS location failed because the location link information could not be found in the database.
+Route To: Sys Log, Alert log, Event Log
+Explanation: The synchronization task requires information about the remote location link in order to synchronize, but it could not find the information in the database.
+Recommended Action: Network information could not be loaded from the database. Check the CuSysAgent diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtReaderPublisherOnly
+Severity: WARNING_ALARM
+Description: Directory synchronization with remote site/HTTPS location %1 was skipped because synchronization can only be performed on the publisher.
+Route To: Sys Log, Alert log, Event Log
+Explanation: This instance of the directory synchronization task did not run because it was started on a subscriber member of a cluster.
+Recommended Action: Synchronization can only occur on the publisher member of a cluster. Check task management on the publisher to see the results of network directory synchronization.
+Alarm Name: EvtReaderRetryFullSyncOutOfMemory
+Severity: WARNING_ALARM
+Description: Location %1 has encountered Out Of Memory error while syncing with location %2.
+Route To: Event Log, Sys Log
+Explanation: Reader was unable to process the object feed received with the current feed size.
+Recommended Action: The next sync will be retried with a reduced feed size.
+Alarm Name: EvtReaderRetryQueueGettingFull
+Severity: ERROR_ALARM
+Description: Reader retry queue at location %1 has reached 10 percent of capacity while syncing with location %2.
+Route To: Event Log, Sys Log, Alert Log
+Explanation: While processing object changes, Reader failed to apply those changes and put those into Retry Queue. This queue is now getting full.
+Recommended Action: Check the CuSysAgent diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtReaderSbr
+Severity: WARNING_ALARM
+Description: Directory synchronization with remote site/HTTPS location %1 was skipped because directory synchronization cannot be performed in SBR Mode.
+Route To: Event Log
+Explanation: This instance of the directory synchronization task did not run because it was started during SBR.
+Recommended Action: Directory Synchronization can only be performed during Non-SBR mode. To verify cluster state, check Cluster Management on Cisco Unity Connection Serviceability page.
+Alarm Name: EvtReaderSyncErrors
+Severity: ERROR_ALARM
+Description: Directory synchronization with remote site/HTTPS location %1 completed, but there were errors applying changes to the local database.
+Route To: Sys Log, Event Log
+Explanation: Some object changes cannot be applied to the database due to load issues or other database contention. Reapplying the changes during the next run may succeed.
+Recommended Action: The changes that were not applied to the local database will be retried next time the synchronization task runs. If errors continue, check the system logs to determine the cause of the problem.
+Alarm Name: EvtReconnected
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) has connected/reconnected to the event publisher.
+Route To: Event Log
+Explanation: Database synchronization thread has connected/reconnected to the event publisher.
+Recommended Action: None
+Alarm Name: EvtReconnectedAuthenticatedMediaClear
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an authenticated channel. This device is not capable of media encryption.
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an authenticated channel. This device is not capable of media encryption.
+Recommended Action: None
+Alarm Name: EvtReconnectedAuthenticatedMediaEncrypt
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an authenticated channel. This device is capable of media encryption.
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an authenticated channel. This device is capable of media encryption.
+Recommended Action: None
+Alarm Name: EvtReconnectedCcm
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2.
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager.
+Recommended Action: None
+Alarm Name: EvtReconnectedEncryptedMediaClear
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an encrypted channel. This device is not capable of media encryption.
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an encrypted channel. This device is not capable of media encryption.
+Recommended Action: None
+Alarm Name: EvtReconnectedEncryptedMediaEncrypt
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an encrypted channel. This device is capable of media encryption.
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an encrypted channel. This device is capable of media encryption.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailover
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverAuthenticatedMediaClear
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an authenticated channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an authenticated channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverAuthenticatedMediaEncrypt
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an authenticated channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an authenticated channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverEncryptedMediaClear
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an encrypted channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an encrypted channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverEncryptedMediaEncrypt
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an encrypted channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an encrypted channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, so Cisco Unity Connection will periodically attempt to failback to the primary server, if configured to do so.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverNofailback
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverNofailbackAuthMediaClear
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an authenticated channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an authenticated channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverNofailbackAuthMediaEncrypt
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an authenticated channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an authenticated channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverNofailbackEncrMediaClear
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an encrypted channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an encrypted channel. This device is not capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server.
+Recommended Action: None
+Alarm Name: EvtReconnectedFailoverNofailbackEncrMediaEncrypt
+Severity: INFORMATIONAL_ALARM
+Description: Cisco Unity Connection port %1: Connected to Cisco Unified Communications Manager %2 using an encrypted channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server. Failover Technical Details: %3
+Route To: Event Log
+Explanation: Cisco Unity Connection port connected to Cisco Unified Communications Manager using an encrypted channel. This device is capable of media encryption. This is not the primary Cisco Unified Communications Manager in this cluster, but Cisco Unity Connection cannot failback to the primary server.
+Recommended Action: None
+Alarm Name: EvtReloadCollectionError
+Severity: ERROR_ALARM
+Description: Database synchronization thread in component %1 (pid=%2) failed loading contents of one or more views from the database. Verify connection to the database. %3
+Route To: Event Log
+Explanation: Database synchronization thread failed loading contents of one or more views from the database.
+Recommended Action: Verify that the Connection DB service is running.
+Alarm Name: EvtReplicatorDbeventError
+Severity: ERROR_ALARM
+Description: An error occurred initializing the connection to Connection DB Event Publisher. Updates may be delayed slightly. TECHNICAL DETAILS: %1
+Route To: Event Log
+Explanation: An error occurred initializing the connection to Connection DB Event Publisher. Updates may be delayed slightly.
+Recommended Action: None
+Alarm Name: EvtReplicatorDbeventStart
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been re-established.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been re-established.
+Recommended Action: None
+Alarm Name: EvtReplicatorDbeventStop
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been broken. Updates may be delayed slightly.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been broken. Updates may be delayed slightly.
+Recommended Action: None
+Alarm Name: EvtReplicatorDependencyTimeout
+Severity: ERROR_ALARM
+Description: Delay receiving dependent object %1 from location %2. Requests sent = %3. This situation may indicate network connectivity problems.
+Route To: Event Log
+Explanation: Failure to retrieve dependent object from remote note. Continuing to request it. This situation may indicate network connectivity problems.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorExhaustedRetries
+Severity: INFORMATIONAL_ALARM
+Description: Remote location %1 has not delivered USN %2, or this location has failed to process it.
+Route To: Event Log
+Explanation: During network replication we failed to receive and process changes associated with the given USN. Those changes will not be applied to this location.
+Recommended Action: Perform a synchronization pull from the remote location.
+Alarm Name: EvtReplicatorFailedDatabaseRead
+Severity: ERROR_ALARM
+Description: Database %1 access error: %2. TECHNICAL DETAILS: %3
+Route To: Event Log
+Explanation: Error accessing the database.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorFailureToApplyChange
+Severity: ERROR_ALARM
+Description: Failed applying a %1 change for [%2] to the database. The change came from network node [%3]. The change has been applied partially, but the object may not be accessible to users.
+Route To: Event Log
+Explanation: We received changes from a remote network node, but we could not apply all the changes included for the object to the database.
+Recommended Action: Check the object record on the source node to make sure it is complete and does not conflict with other objects in the network. Pay close attention to the alias, DTMF Extension, and name or display name fields. Previous alarms may provide more detail regarding the cause of the problem.
+Alarm Name: EvtReplicatorMemoryError
+Severity: ERROR_ALARM
+Description: %1 The system may be low on virtual memory. Close applications and restart Cisco Unity Connection.
+Route To: Event Log
+Explanation: The system may be low on virtual memory.
+Recommended Action: Close applications and restart Cisco Unity Connection.
+Alarm Name: EvtReplicatorMissingUSNObject
+Severity: ERROR_ALARM
+Description: Missing object for request from location %1. USN = %2. This situation may indicate network connectivity problems.
+Route To: Event Log
+Explanation: A USN requested from remote location has no object associated with it. Ignoring request. This situation may indicate network connectivity problems.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorStalledReceiveReplication
+Severity: ERROR_ALARM
+Description: Detected stalled replication receiving from location %1. Waiting for missing USN %2. This situation may indicate network connectivity problems.
+Route To: Event Log
+Explanation: Remote node is not sending updates as expected. This situation may indicate network connectivity problems.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorStalledSendReplication
+Severity: ERROR_ALARM
+Description: Detected stalled replication sending to location %1. Waiting for acknowledgment of USN %2. This situation may indicate network connectivity problems.
+Route To: Event Log
+Explanation: Remote node is not acknowledging updates as expected. This situation may indicate network connectivity problems.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorUnexpectedException
+Severity: ERROR_ALARM
+Description: %1 Unexpected exception thrown. This event may be helpful for troubleshooting in conjunction with other events. Technical details: %2.
+Route To: Event Log
+Explanation: Unexpected exception thrown. This event may be helpful for troubleshooting in conjunction with other events.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorUSNMismatch
+Severity: ERROR_ALARM
+Description: Requested USN %1 from location %2 does not exist in database. This situation may indicate network connectivity problems.
+Route To: Event Log
+Explanation: A USN requested from remote location is invalid. Ignoring request. This situation may indicate network connectivity problems.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtReplicatorUsrDeleteCHMsgRecipReplace
+Severity: ERROR_ALARM
+Description: Global User Delete for %1, required a replacement for at least one Call Handler or Interview Handler message recipient.
+Route To: Event Log
+Explanation: When a global user is deleted, but there is a call handler or interview handler which is configured to send messages to this user, a replacement recipient is used so the user may be successfully deleted. The replacement recipient is usually the undeliverable message distribution list.
+Recommended Action: Reconfigure the effected call/interview handler(s) message recipient field.
+Alarm Name: EvtRlDefaultLangNotInstalled
+Severity: ERROR_ALARM
+Description: The Default language [%1] is not installed. Run Cisco Unity Connection Setup to install the Default language.
+Route To: Event Log
+Explanation: The Default language is not installed.
+Recommended Action: Run Cisco Unity Connection Setup to install the Default language.
+Alarm Name: EvtRlDefaultLangNotLoaded
+Severity: WARNING_ALARM
+Description: The Default language [%1] is not loaded. Adding Default language to Loaded list.
+Route To: Event Log
+Explanation: The Default language is not loaded. Adding Default language to Loaded list.
+Recommended Action: None
+Alarm Name: EvtRlFailedGettingDefaultLang
+Severity: ERROR_ALARM
+Description: Failed to get the Default language.
+Route To: Event Log
+Explanation: Failed to get the Default language.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtRlFailedGettingOsLanguageAbbr
+Severity: ERROR_ALARM
+Description: Failed to get the language abbreviation from the operating system.
+Route To: Event Log
+Explanation: Failed to get the language abbreviation from the operating system.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtRlRegAccessFailed
+Severity: ERROR_ALARM
+Description: Failed to open the ResourceLoader Registry key--unable to load any replacement variables.
+Route To: Event Log
+Explanation: Failed to open the ResourceLoader Registry key--unable to load any replacement variables.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtSkinnyMsgTooShort
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection SCCP integration: Received Skinny message '%1' (%2 bytes) that is too short to process. This can occur if the Cisco Unified Communications Manager is an older version than the minimum version with which Cisco Unity Connection can integrate. Please ensure that Cisco Unity Connection is still answering calls, and reset the ports or restart the computer if it is not already running.
+Route To: Event Log
+Explanation: Cisco Unity Connection SCCP integration: Received Skinny message that is too short to process. This can occur if the Cisco Unified Communications Manager is an older version than the minimum version with which Cisco Unity Connection can integrate.
+Recommended Action: Please ensure that Cisco Unity Connection is still answering calls, and reset the ports or restart the computer if it is not already running.
+Alarm Name: EvtStlException
+Severity: ERROR_ALARM
+Description: [Thread %1]: STL report the following exception [%2]. This is unexpected. Please contact Cisco Technical Support.
+Route To: Event Log
+Explanation: STL reported an exception.
+Recommended Action: Please contact Cisco Technical Support.
+Alarm Name: EvtSubAccInvalidPswd
+Severity: INFORMATIONAL_ALARM
+Description: An invalid password entered when trying to log into a user mailbox. Details - %1.
+Route To: Event Log
+Explanation: An invalid password entered when trying to log into a user mailbox.
+Recommended Action: None
+Alarm Name: EvtSubAccLockedMaxHack
+Severity: INFORMATIONAL_ALARM
+Description: A user account has been locked as max number of invalid login attempts exceeded. Details - %1.
+Route To: Event Log
+Explanation: A user account has been locked as max number of invalid login attempts exceeded.
+Recommended Action: None
+Alarm Name: EvtSubCrossboxLivereplyDisabled
+Severity: ERROR_ALARM
+Description: CrossBoxLiveReply is not enabled. Check configurations.
+Route To: Event Log
+Explanation: CrossBoxLiveReply is not enabled.
+Recommended Action: Check live reply configuration.
+Alarm Name: EvtSubHandoffDestConnected
+Severity: INFORMATIONAL_ALARM
+Description: Cross-box handoff. Destination %1 connected.
+Route To: Event Log
+Explanation: Cross-box handoff. Destination connected.
+Recommended Action: None
+Alarm Name: EvtSubHandoffFailedCreatePacketFailed
+Severity: ERROR_ALARM
+Description: Source Cisco Unity Connection server could not construct handoff information.
+Route To: Event Log
+Explanation: Source Cisco Unity Connection server could not construct handoff information.
+Recommended Action: None
+Alarm Name: EvtSubHandoffFailedInvalidResponse
+Severity: ERROR_ALARM
+Description: Handoff to %1 was unsuccessful. The target server sent invalid response code.
+Route To: Event Log
+Explanation: Handoff was unsuccessful. The target server sent invalid response code.
+Recommended Action: None
+Alarm Name: EvtSubHandoffFailedNoResponse
+Severity: ERROR_ALARM
+Description: Handoff to %1 was unsuccessful. The target server didn't respond.
+Route To: Event Log
+Explanation: Handoff was unsuccessful. The target server didn't respond.
+Recommended Action: None
+Alarm Name: EvtSubHandoffFailedSrcCantSendInfo
+Severity: ERROR_ALARM
+Description: Source Cisco Unity Connection server could not send handoff information.
+Route To: Event Log
+Explanation: Source Cisco Unity Connection server could not send handoff information.
+Recommended Action: None
+Alarm Name: EvtSubHandoffFailedSrcMissInfo
+Severity: ERROR_ALARM
+Description: Information not received from source Cisco Unity Connection server %1. Disconnecting call.
+Route To: Event Log
+Explanation: Information not received from source Cisco Unity Connection server. Disconnecting call.
+Recommended Action: None
+Alarm Name: EvtSubHandoffFailedTargetDisconnected
+Severity: ERROR_ALARM
+Description: Target Cisco Unity Connection server %1 disconnected the call after accepting the handoff packet.
+Route To: Event Log
+Explanation: Target Cisco Unity Connection server disconnected the call after accepting the handoff packet.
+Recommended Action: None
+Alarm Name: EvtSubHandoffInvalidRequest
+Severity: ERROR_ALARM
+Description: Invalid handoff information, required parameters are missing.
+Route To: Event Log
+Explanation: Invalid handoff information, required parameters are missing.
+Recommended Action: None
+Alarm Name: EvtSubHandoffInvalidSubid
+Severity: ERROR_ALARM
+Description: User Extension received through Handoff Operation %1 is invalid.
+Route To: Event Log
+Explanation: User Extension received through Handoff Operation is invalid.
+Recommended Action: None
+Alarm Name: EvtSubHandoffLivereplyFailedNonsub
+Severity: ERROR_ALARM
+Description: Cross-box live reply request failed. Target server %1 returned sent user is not a valid local user.
+Route To: Event Log
+Explanation: Cross-box live reply request failed. Target server returned sent user is not a valid local user.
+Recommended Action: None
+Alarm Name: EvtSubHandoffLivereplyFailedNoreason
+Severity: ERROR_ALARM
+Description: Cross-box live reply request failed. Possible reasons are: a calling party disconnected the call during transfer, the target server %1 returned an unspecified error or the target server didn't respond. Check the version of the target server %1 and the configuration of the routing rule.
+Route To: Event Log
+Explanation: Cross-box live reply request failed. Possible reasons are: a calling party disconnected the call during transfer, the target server returned an unspecified error or the target server didn't respond.
+Recommended Action: Check the version of the target server %1 and the configuration of the routing rule.
+Alarm Name: EvtSubHandoffLivereplyFailedNoxfer
+Severity: ERROR_ALARM
+Description: Cross-box live reply request failed. Target server %1 returned the user's transfer setting is not enabled.
+Route To: Event Log
+Explanation: Cross-box live reply request failed. Target server returned the user's transfer setting is not enabled.
+Recommended Action: None
+Alarm Name: EvtSubHandoffMissingOperationCode
+Severity: ERROR_ALARM
+Description: The requested handoff operation code is missing.
+Route To: Event Log
+Explanation: The requested handoff operation code is missing.
+Recommended Action: None
+Alarm Name: EvtSubHandoffOperationSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Handoff operation %1 is successfully completed.
+Route To: Event Log
+Explanation: Handoff operation successfully completed.
+Recommended Action: None
+Alarm Name: EvtSubHandoffPerformRequestFailed
+Severity: ERROR_ALARM
+Description: Perform handoff request failed during %1 on line %2 of file %3. One possible reason: the call is disconnected by a calling party.
+Route To: Event Log
+Explanation: Perform handoff request failed. One possible reason: the call is disconnected by a calling party.
+Recommended Action: None
+Alarm Name: EvtSubHandoffReceiveEmptyInfo
+Severity: ERROR_ALARM
+Description: During handoff operation received an empty information packet.
+Route To: Event Log
+Explanation: During handoff operation received an empty information packet.
+Recommended Action: None
+Alarm Name: EvtSubHandoffSendResponseForInvalidRequest
+Severity: ERROR_ALARM
+Description: Send out a response for an invalid handoff request. Call disconnected.
+Route To: Event Log
+Explanation: Send out a response for an invalid handoff request. Call disconnected.
+Recommended Action: None
+Alarm Name: EvtSubHandoffSetupFailed
+Severity: ERROR_ALARM
+Description: Cross-box handoff failed. Reason: %1
+Route To: Event Log
+Explanation: Cross-box handoff failed.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtSubHandoffStringEmpty
+Severity: WARNING_ALARM
+Description: Handoff dial string for %1 is empty.
+Route To: Event Log
+Explanation: Handoff dial string is empty.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtSubHandoffSucceeded
+Severity: INFORMATIONAL_ALARM
+Description: Cross-Box %1 to %2 successfully completed.
+Route To: Event Log
+Explanation: Cross-Box successfully completed.
+Recommended Action: None
+Alarm Name: EvtSubHandoffSucceededSendResponse
+Severity: INFORMATIONAL_ALARM
+Description: Send out a live reply success response for a handoff request. Hand off succeeded.
+Route To: Event Log
+Explanation: Send out a live reply success response for a handoff request. Hand off succeeded.
+Recommended Action: None
+Alarm Name: EvtSubHandoffTargetDisconnected
+Severity: ERROR_ALARM
+Description: Target Cisco Unity Connection server %1 disconnected the call, however source had sent the packet.
+Route To: Event Log
+Explanation: Target Cisco Unity Connection server disconnected the call, however source had sent the packet.
+Recommended Action: None
+Alarm Name: EvtSubHandoffUnsupportedCode
+Severity: ERROR_ALARM
+Description: The requested handoff operation code %1 is not supported.
+Route To: Event Log
+Explanation: The requested handoff operation code is not supported.
+Recommended Action: None
+Alarm Name: EvtSubLivereplyFailedMissingPilot
+Severity: ERROR_ALARM
+Description: Cross-box live reply failed. Pilot number for Cisco Unity Connection %1 is not configured.
+Route To: Event Log
+Explanation: Cross-box live reply failed. Pilot number for Cisco Unity Connection is not configured.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtSubLivereplyFailedMissingXferstring
+Severity: ERROR_ALARM
+Description: Live reply to external user %1 failed. The XferString is not configured.
+Route To: Event Log
+Explanation: Live reply to external user failed. The XferString is not configured.
+Recommended Action: None
+Alarm Name: EvtSubLivereplyFailedMiu
+Severity: ERROR_ALARM
+Description: Live reply to external user %1 failed. Couldn't get MIU.
+Route To: Event Log
+Explanation: Live reply to external user failed. Couldn't get MIU.
+Recommended Action: None
+Alarm Name: EvtSubLivereplyFailedSetup
+Severity: ERROR_ALARM
+Description: Failed to setup cross-box live reply hand off parameters. Check cross-box live reply configurations.
+Route To: Event Log
+Explanation: Failed to setup cross-box live reply hand off parameters.
+Recommended Action: Check cross-box live reply configurations.
+Alarm Name: EvtSubLivereplyFailedXfer
+Severity: ERROR_ALARM
+Description: Live reply to external user %1 failed. MIU release transfer failed. Please check if the transfer string %2 is valid.
+Route To: Event Log
+Explanation: Live reply to external user failed. MIU release transfer failed.
+Recommended Action: Please check if the transfer string is valid.
+Alarm Name: EvtSubLiverepyToRemotesub
+Severity: INFORMATIONAL_ALARM
+Description: Live reply to external user at extension %1 to number %2.
+Route To: Event Log
+Explanation: Live reply to external user.
+Recommended Action: None
+Alarm Name: EvtSubMethodHresult
+Severity: ERROR_ALARM
+Description: An unexpected error occurred while a caller was on the phone with Cisco Unity Connection, and the caller heard the failsafe conversation.
+Route To: Event Log
+Explanation: An unexpected error occurred while a caller was on the phone with Cisco Unity Connection, and the caller heard the failsafe conversation.
+Recommended Action: None
+Alarm Name: EvtSubNullParameter
+Severity: ERROR_ALARM
+Description: Invalid argument passed into method %1 on line %2 of file %3.
+Route To: Event Log
+Explanation: Invalid argument passed into method.
+Recommended Action: None
+Alarm Name: EvtSubNullPointer
+Severity: ERROR_ALARM
+Description: %1 returned a NULL pointer on line %2 of file %3.
+Route To: Event Log
+Explanation: Unexpected NULL pointer returned.
+Recommended Action: None
+Alarm Name: EvtSubSigninFailedExtractCrossboxParam
+Severity: ERROR_ALARM
+Description: ExtractCrossBoxLoginParameters failed to retrieve parameters. Check cross-box configuration. Possible reason: Pilot number for target server %1 is not configured.
+Route To: Event Log
+Explanation: ExtractCrossBoxLoginParameters failed to retrieve parameters. Possible reason: Pilot number for target server is not configured.
+Recommended Action: Check cross-box configuration.
+Alarm Name: EvtSubVuiFailure
+Severity: ERROR_ALARM
+Description: Could not start the Voice Recognition conversation for voice mail user [%1]. This call will fall back to the Touch Tone conversation. Ensure that Cisco Unity Connection Voice Recognizer is running. Procedure returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: Could not start the Voice Recognition conversation for voice mail user. This call will fall back to the Touch Tone conversation.
+Recommended Action: Ensure that Cisco Unity Connection Voice Recognizer is running.
+Alarm Name: EvtSubVuiOutOfLicenses
+Severity: WARNING_ALARM
+Description: Could not start the Voice Recognition conversation for voice mail user [%1] because there are no available Voice Recognition licenses. This call will fall back to the Touch Tone conversation. If this happens often, consider adding additional Voice Recognition sessions. Procedure returned [%2] on line %3 of file %4.
+Route To: Event Log
+Explanation: Could not start the Voice Recognition conversation for voice mail user because there are no available Voice Recognition licenses. This call will fall back to the Touch Tone conversation.
+Recommended Action: If this happens often, consider adding additional Voice Recognition sessions.
+Alarm Name: EvtSyncDbAuditConfigFailed
+Severity: ERROR_ALARM
+Description: Failed to update Cisco Unity Connection database audit configuration based on change to Cisco Unified Serviceability settings.
+Route To: Event Log
+Explanation: A change was made to the Audit Log Configuration in Cisco Unified Serviceability for the server, but the change could not be applied to the Cisco Unity Connection database audit configuration.
+Recommended Action: See the trace log syncdbauditcfg.log for more information.
+Alarm Name: EvtSysAgentCannotInitRequestMonitor
+Severity: ERROR_ALARM
+Description: SysAgent fails to create or initialize the task request monitor! The on-demand tasks will not be able to be executed.
+Route To: Event Log
+Explanation: SysAgent fails to create or initialize the task request monitor! The on-demand tasks will not be able to be executed.
+Recommended Action: None
+Alarm Name: EvtSysAgentClusterChanged
+Severity: INFORMATIONAL_ALARM
+Description: The cluster has been changed. Tasks will be resynchronized.
+Route To: Event Log
+Explanation: The cluster has been changed either due to a new server is added or removed or a failover has happened. Tasks will be resynchronized.
+Recommended Action: None
+Alarm Name: EvtSysAgentDbEventError
+Severity: ERROR_ALARM
+Description: An error occurred initializing the connection to Connection DB Event Publisher. Task updates may be delayed slightly. Technical details: %1.
+Route To: Event Log
+Explanation: An error occurred initializing the connection to Connection DB Event Publisher. Task updates may be delayed slightly.
+Recommended Action: None
+Alarm Name: EvtSysAgentDbEventStart
+Severity: INFORMATIONAL_ALARM
+Description: The connection to Connection DB Event Publisher has been re-established.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been re-established.
+Recommended Action: None
+Alarm Name: EvtSysAgentDbEventStop
+Severity: ERROR_ALARM
+Description: The connection to Connection DB Event Publisher has been broken. Task updates may be delayed slightly. Technical details: Polling interval set to %1 seconds.
+Route To: Event Log
+Explanation: The connection to Connection DB Event Publisher has been broken. Task updates may be delayed slightly.
+Recommended Action: None
+Alarm Name: EvtTaskFrameworkDbEventError
+Severity: ERROR_ALARM
+Description: An error occurred initializing the connection to Connection DB Event Publisher. Execution of on-demand task will be delayed . Technical details: %1
+Route To: Event Log
+Explanation: An error occurred initializing the connection to Connection DB Event Publisher. Execution of on-demand task will be delayed .
+Recommended Action: None
+Alarm Name: EvtUmssDiskUsedIncludesReserved
+Severity: ERROR_ALARM
+Description: This messaging system is currently using disk space reserved for a future software upgrade. An estimated %1MB of free disk space must be available in order to upgrade software on this server.
+Route To: Event Log
+Explanation: Disk space must be freed up to successfully complete an upgrade of the system software.
+Recommended Action: Free disk space on this system. Start by having users delete voice messages that they no longer need. Connection automatically removes deleted messages from the hard disk every 30 minutes. To ensure that the system does not reach maximum disk capacity again, revise the Message Storage > Message Aging Policy and the Message Storage > Mailbox Quotas pages in Cisco Unity Connection Administration.
+Alarm Name: EvtUmssimapsvrDbeventStart
+Severity: INFORMATIONAL_ALARM
+Description: The Connection IMAP server's connection to Connection DB Event Publisher has been re-established.
+Route To: Event Log
+Explanation: The Connection IMAP server's connection to Connection DB Event Publisher has been re-established.
+Recommended Action: None
+Alarm Name: EvtUmssimapsvrDbeventStop
+Severity: INFORMATIONAL_ALARM
+Description: The Connection IMAP server's connection to Connection DB Event Publisher has been broken. Updates to email clients may be slow.
+Route To: Event Log
+Explanation: The Connection IMAP server's connection to Connection DB Event Publisher has been broken. Updates to email clients may be slow.
+Recommended Action: None
+Alarm Name: EvtUmssimapsvrGetconfigFailed
+Severity: ERROR_ALARM
+Description: The Connection IMAP server could not retrieve its configuration from the configuration database. Error code %1. The IMAP server will use default values instead.
+Route To: Event Log
+Explanation: The Connection IMAP server could not retrieve its configuration from the configuration database. The IMAP server will use default values instead.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtUmssimapsvrInitperfcountersFailed
+Severity: ERROR_ALARM
+Description: An error occurred in initializing performance counters for the Connection IMAP server. Error %1. Performance counters for this service will be invalid until the error condition is resolved.
+Route To: Event Log
+Explanation: An error occurred in initializing performance counters for the Connection IMAP server. Performance counters for this service will be invalid until the error condition is resolved.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtUmssimapsvrSocketFailed
+Severity: ERROR_ALARM
+Description: The Connection IMAP server could not initialize one of the listening sockets. Another application may be using one of ports reserved for IMAP. Stop that application and restart the Connection IMAP service.
+Route To: Event Log
+Explanation: The Connection IMAP server could not initialize one of the listening sockets. Another application may be using one of ports reserved for IMAP.
+Recommended Action: Stop the other application that is using one of ports reserved for IMAP and restart the Connection IMAP service.
+Alarm Name: EvtUmssimapsvrSslFailed
+Severity: ERROR_ALARM
+Description: The Connection IMAP server could not initialize SSL. The certificate maybe invalid or missing. The IMAP server will continue to function but SSL will be disabled.
+Route To: Event Log
+Explanation: The Connection IMAP server could not initialize SSL. The certificate may be invalid or missing. The IMAP server will continue to function but SSL will be disabled.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtUnableToProcessDataForReport
+Severity: WARNING_ALARM
+Description: Unable to generate report data, file get skipped due to parse error.
+Route To: Alert log, Event Log
+Explanation: Error occurred in Reports Data Harvester for data files which are not parsed correctly and hence get skipped for data reporting
+Recommended Action: Please take the backup of these files and take corrective action.
+Alarm Name: EvtUnexpectedException
+Severity: ERROR_ALARM
+Description: Unexpected exception thrown in %1. This event may be helpful for troubleshooting in conjunction with other events. TECHNICAL DETAILS: %2
+Route To: Event Log
+Explanation: Unexpected exception thrown. This event may be helpful for troubleshooting in conjunction with other events.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtUnexpectedStateRequest
+Severity: ERROR_ALARM
+Description: Cisco Unity Connection port %1: Unexpected state transition requested. This Cisco Unity Connection port may be in an undefined state. Requested state = %2. Current state = %3. Additional Info: %4
+Route To: Event Log
+Explanation: Cisco Unity Connection port: Unexpected state transition requested. This Cisco Unity Connection port may be in an undefined state.
+Recommended Action: See the Cisco Unity Connection Troubleshooting Guide.
+Alarm Name: EvtVoicenameReaderException
+Severity: ERROR_ALARM
+Description: Voice name synchronization with remote site/HTTPS location %1 did not complete because an internal error occurred during synchronization. Error Message: %2
+Route To: Sys Log, Alert log, Event Log
+Explanation: Voice name synchronization encountered an internal processing error.
+Recommended Action: Check the CuSysAgent diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtVoicenameReaderNotFound
+Severity: ERROR_ALARM
+Description: Voice name synchronization with a remote site/HTTPS location failed because the location link information could not be found in the database.
+Route To: Sys Log, Alert log, Event Log
+Explanation: The synchronization task requires information about the remote location link in order to synchronize, but it could not find the information in the database.
+Recommended Action: Network information could not be loaded from the database. Check the CuSysAgent diagnostic logs to help determine the source of the problem.
+Alarm Name: EvtVoicenameReaderPublisherOnly
+Severity: WARNING_ALARM
+Description: Voice name synchronization with remote site/HTTPS location %1 was skipped because synchronization can only be performed on the publisher.
+Route To: Sys Log, Alert log, Event Log
+Explanation: This instance of the voice name synchronization task did not run because it was started on a subscriber member of a cluster.
+Recommended Action: Synchronization can only occur on the publisher member of a cluster. Check task management on the publisher to see the results of network voice name synchronization.
+Alarm Name: EvtVoicenameReaderSbr
+Severity: WARNING_ALARM
+Description: Voicename synchronization with remote site/HTTPS location %1 was skipped because voicename synchronization cannot be performed in SBR Mode.
+Route To: Event Log
+Explanation: This instance of the Voicename synchronization task did not run because it was started during SBR.
+Recommended Action: Synchronization can only be performed during Non-SBR mode. To verify cluster state, check Cluster Management on Cisco Unity Connection Serviceability page.
+Alarm Name: EvtXferNullParameter
+Severity: ERROR_ALARM
+Description: An invalid argument (a NULL parameter) was received. This is a fatal condition and is not expected. Possible reason for failure could be a corrupted stack or memory. TECHNICAL DETAILS: Invalid argument passed into method %1 on line %2 of file %3.
+Route To: Event Log
+Explanation: An invalid argument (a NULL parameter) was received. This is a fatal condition and is not expected. Possible reason for failure could be a corrupted stack or memory.
+Recommended Action: None
+Alarm Name: MonitorServerRPCInitFailed
+Severity: ERROR_ALARM
+Description: Monitor server failed to initialize RPC interface. As a result, the real-time port monitoring (RTMT) operation could fail. A system restart is needed to correct this problem.
+Route To: Event Log
+Explanation: Monitor server failed to initialize RPC interface. As a result, the real-time port monitoring (RTMT) operation could fail.
+Recommended Action: A system restart is needed to correct the problem.
+Alarm Name: EvtCucExportRequest
+Severity: INFORMATIONAL_ALARM
+Description: Request to Authorize the Export Restrited feature initiated.
+Route To: Event Log
+Explanation: >Triggered the Export Request CLI to authorize the export restricted authorization key
+Alarm Name: EvtCucExportReturn
+Severity: INFORMATIONAL_ALARM
+Description: Triggered the Export Return CLI to return the export restricted authorization key
+Route To: Event Log
+Explanation: >Triggered the Export Request CLI to authorize the export restricted authorization key
+Alarm Name: EvtCucExportRequestFailure
+Severity: INFORMATIONAL_ALARM
+Description: Request to Authorize the Export Restrited feature failed
+Route To: Event Log
+Explanation: >Unable to request the Export Restricted Authorization Key.
+Recommended Action: Execute "show license status" CLI to check the failure reason.
+Alarm Name: EvtCucExportReturnFailure
+Severity: INFORMATIONAL_ALARM
+Description: Return of Export Restricted Authorization failed
+Route To: Event Log
+Explanation: >Unable to return the Export Restricted Authorization Key
+Recommended Action: Execute "show license status" CLI to check the failure reason.
+Alarm Name: EvtCucExportCancel
+Severity: INFORMATIONAL_ALARM
+Description: Successfully cancelled the Export request or return CLI.
+Route To: Event Log, Alert Log
+Explanation: >Export Request/Return retry operation is successfully cancelled
